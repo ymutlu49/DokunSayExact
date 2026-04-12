@@ -11,7 +11,7 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
   const pickQuiz = (idx) => {
     if (!game || game.feedback) return;
     const ok = idx === QUIZ_QUESTIONS[game.rqi].answer;
-    speak(ok ? 'Do\ğru!' : 'Tekrar dene.');
+    speak(ok ? 'Doğru!' : 'Tekrar dene.');
     setGame({ ...game, feedback: ok ? 'correct' : 'wrong', score: game.score + (ok ? 1 : 0), total: game.total + 1 });
     if (ok) setTimeout(() => {
       const qi2 = Math.floor(Math.random() * QUIZ_QUESTIONS.length);
@@ -29,7 +29,7 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
   const pickCompare = (op) => {
     if (!game || game.feedback) return;
     const ok = (op === '<' && game.a < game.b) || (op === '>' && game.a > game.b) || (op === '=' && game.a === game.b);
-    speak(ok ? 'Do\ğru!' : 'Tekrar dene.');
+    speak(ok ? 'Doğru!' : 'Tekrar dene.');
     setGame({ ...game, feedback: ok ? 'correct' : 'wrong', score: game.score + (ok ? 1 : 0), total: game.total + 1 });
     if (ok) setTimeout(() => {
       let a2 = Math.floor(Math.random() * 11) - 5;
@@ -47,7 +47,7 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
   const pickScenario = (idx) => {
     if (!game || game.feedback) return;
     const ok = idx === SCENARIO_QUESTIONS[game.rqi].answer;
-    speak(ok ? 'Do\ğru! ' + SCENARIO_QUESTIONS[game.rqi].explanation : 'Tekrar dene.');
+    speak(ok ? 'Doğru! ' + SCENARIO_QUESTIONS[game.rqi].explanation : 'Tekrar dene.');
     setGame({ ...game, feedback: ok ? 'correct' : 'wrong', score: game.score + (ok ? 1 : 0), total: game.total + 1 });
     if (ok) setTimeout(() => {
       const qi2 = Math.floor(Math.random() * SCENARIO_QUESTIONS.length);
@@ -71,13 +71,13 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
         {!game ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 4 }}>{'🎮 Oyunlar'}</div>
-            <button onClick={startQuiz} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(245,158,11,.15)', background: THEME.accentL, cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.accentD, fontFamily: 'inherit', textAlign: 'left' }}>{'🧮 \İ\şlem Quiz (15 Soru)'}</button>
-            <button onClick={startCompare} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'\⚖\️ Kar\ş\ıla\şt\ır'}</button>
-            <button onClick={() => setGame({ mode: 'zero', score: 0, total: 0, feedback: null, target: Math.floor(Math.random() * 5) + 1 })} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit', textAlign: 'left' }}>{'🟣 S\ıf\ır \Çifti Av\ı'}</button>
-            <button onClick={startNumline} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit', textAlign: 'left' }}>{'📏 Say\ı Do\ğrusunda Topla'}</button>
+            <button onClick={startQuiz} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(245,158,11,.15)', background: THEME.accentL, cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.accentD, fontFamily: 'inherit', textAlign: 'left' }}>{'🧮 İşlem Quiz (15 Soru)'}</button>
+            <button onClick={startCompare} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'\⚖\️ Karşılaştır'}</button>
+            <button onClick={() => setGame({ mode: 'zero', score: 0, total: 0, feedback: null, target: Math.floor(Math.random() * 5) + 1 })} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit', textAlign: 'left' }}>{'🟣 Sıfır Çifti Avı'}</button>
+            <button onClick={startNumline} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit', textAlign: 'left' }}>{'📏 Sayı Doğrusunda Topla'}</button>
             <div style={{ height: 1, background: 'rgba(0,0,0,.06)', margin: '4px 0' }} />
-            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.blue, marginBottom: 4 }}>{'🌍 Ger\çek Hayat'}</div>
-            <button onClick={startScenario} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'🔍 Senaryo Sorular\ı'}</button>
+            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.blue, marginBottom: 4 }}>{'🌍 Gerçek Hayat'}</div>
+            <button onClick={startScenario} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'🔍 Senaryo Soruları'}</button>
           </div>
         ) : (
           <div>
@@ -133,7 +133,7 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
                     background: game.feedback === 'correct' ? 'rgba(34,197,94,.1)' : 'rgba(239,68,68,.06)',
                     textAlign: 'center', fontSize: 13, fontWeight: 900,
                     color: game.feedback === 'correct' ? THEME.green : THEME.red,
-                  }}>{game.feedback === 'correct' ? '\✅ Do\ğru!' : '\❌ Tekrar dene!'}</div>
+                  }}>{game.feedback === 'correct' ? '\✅ Doğru!' : '\❌ Tekrar dene!'}</div>
                 )}
               </div>
             )}
@@ -142,10 +142,10 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
             {game.mode === 'zero' && (
               <div>
                 <div style={{ padding: '10px', borderRadius: 10, background: '#fff', textAlign: 'center', marginBottom: 6 }}>
-                  <div style={{ fontSize: 12, color: '#888' }}>{'Kanvasa ' + game.target + ' s\ıf\ır \çifti ekle'}</div>
+                  <div style={{ fontSize: 12, color: '#888' }}>{'Kanvasa ' + game.target + ' sıfır çifti ekle'}</div>
                   <div style={{ fontSize: 28, fontWeight: 900, color: '#6d28d9' }}>{game.target + '\× (\⊕\⊖)'}</div>
                   <div style={{ fontSize: 12, color: '#888', marginTop: 4 }}>
-                    {'\Şu an: \⊕' + posCount + ' \⊖' + negCount + ' net=' + netValue}
+                    {'Şu an: \⊕' + posCount + ' \⊖' + negCount + ' net=' + netValue}
                   </div>
                 </div>
                 {netValue === 0 && posCount === game.target && (
@@ -161,19 +161,19 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
                   <div style={{ fontSize: 14, fontWeight: 900, color: THEME.text }}>
                     {'(' + (game.start >= 0 ? '+' : '') + game.start + ') + (' + (game.add >= 0 ? '+' : '') + game.add + ') = ?'}
                   </div>
-                  <div style={{ fontSize: 10, color: '#888', marginTop: 4 }}>{'Say\ı do\ğrusunda animasyonu izle!'}</div>
+                  <div style={{ fontSize: 10, color: '#888', marginTop: 4 }}>{'Sayı doğrusunda animasyonu izle!'}</div>
                 </div>
                 <button onClick={() => animateNumberLine(game.start, game.add)} style={{
                   width: '100%', padding: '8px 0', borderRadius: 8, border: 'none',
                   background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',
                   color: '#fff', fontSize: 12, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit', marginBottom: 6,
-                }}>{'\▶ Animasyonu Ba\şlat'}</button>
+                }}>{'\▶ Animasyonu Başlat'}</button>
                 <div style={{ display: 'flex', gap: 3 }}>
                   {[game.answer - 1, game.answer, game.answer + 1, game.answer + 2].sort(() => Math.random() - 0.5).map((v, vi) => (
                     <button key={vi} onClick={() => {
                       if (game.feedback) return;
                       const ok = v === game.answer;
-                      speak(ok ? 'Do\ğru!' : 'Yanl\ı\ş.');
+                      speak(ok ? 'Doğru!' : 'Yanlış.');
                       setGame({ ...game, feedback: ok ? 'correct' : 'wrong', score: game.score + (ok ? 1 : 0), total: game.total + 1 });
                       if (ok) setTimeout(() => {
                         const a2 = Math.floor(Math.random() * 7) - 3;

@@ -25,11 +25,11 @@ const Sidebar = ({
   }}>
     {!collapsed ? (
       <div style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden' }}>
-        {/* \Üst bar */}
+        {/* Üst bar */}
         <div style={{ padding: '10px 14px 6px', display: 'flex', alignItems: 'center', gap: 8, borderBottom: '1px solid rgba(0,0,0,.05)' }}>
           <Logo size={28} />
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 14, fontWeight: 900, color: THEME.text }}>DokunSay Tam Say\ılar</div>
+            <div style={{ fontSize: 14, fontWeight: 900, color: THEME.text }}>DokunSay Tam Sayılar</div>
           </div>
           <button onClick={() => setCollapsed(true)} style={{
             background: 'rgba(0,0,0,.04)', border: 'none', cursor: 'pointer',
@@ -38,7 +38,7 @@ const Sidebar = ({
           }}>{'\◀'}</button>
         </div>
 
-        {/* Tab butonlar\ı */}
+        {/* Tab butonları */}
         <div style={{ display: 'flex', padding: '6px 10px', gap: 3, background: 'rgba(0,0,0,.02)' }}>
           {TAB_ICONS.map(([icon, tab]) => (
             <button key={tab} onClick={() => setActiveTab(tab)} style={{
@@ -52,7 +52,7 @@ const Sidebar = ({
           ))}
         </div>
 
-        {/* Tab i\çeri\ği */}
+        {/* Tab içeriği */}
         {activeTab === 'mat' && <MaterialsTab {...materialsProps} />}
         {activeTab === 'act' && <ActivitiesTab {...activitiesProps} />}
         {activeTab === 'game' && <GamesTab {...gamesProps} />}

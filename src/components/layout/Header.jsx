@@ -12,10 +12,10 @@ const Header = ({ posCount, negCount, netValue, zoom, setZoom }) => (
       <Logo size={34} />
     </div>
     <span style={{ fontSize: 20, fontWeight: 900, color: THEME.accent }}>DokunSay</span>
-    <span style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,.4)' }}>Tam Say\ılar</span>
+    <span style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,.4)' }}>Tam Sayılar</span>
     <div style={{ flex: 1 }} />
 
-    {/* Pul sayac\ı */}
+    {/* Pul sayacı */}
     <div style={{
       display: 'flex', gap: 6, alignItems: 'center',
       padding: '4px 14px', background: 'rgba(255,255,255,.06)', borderRadius: 10,

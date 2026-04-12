@@ -1,7 +1,7 @@
 import { ACTIVITIES, CATEGORY_LABELS, CATEGORY_COLORS } from '../../constants/activities';
 import { THEME } from '../../constants/theme';
 
-const CATEGORY_ORDER = ['ke\şif', 'kavram', 'i\şlem', 'kar\ş\ıla\şt\ır', 'senaryo', 'yan\ılg\ı'];
+const CATEGORY_ORDER = ['keşif', 'kavram', 'işlem', 'karşılaştır', 'senaryo', 'yanılgı'];
 
 const ActivitiesTab = ({ activeTemplate, setActiveTemplate, setInstructionScreen }) => (
   <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>

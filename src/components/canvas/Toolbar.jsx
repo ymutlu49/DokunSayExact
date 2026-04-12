@@ -1,15 +1,15 @@
 import { THEME } from '../../constants/theme';
 
 const TOOLS = [
-  ['select', '🖱️', 'Se\ç'],
+  ['select', '🖱️', 'Seç'],
   ['pen', '\✏\️', 'Kalem'],
   ['highlighter', '🖍️', 'Vurgula'],
   ['eraser', '🧹', 'Silgi'],
 ];
 
 const COLORS = ['#1a1a1a', '#ef4444', '#3b82f6', '#22c55e', '#f59e0b', '#8b5cf6', '#ec4899', '#fff'];
-const WIDTHS = [{ w: 2, label: '\İnce' }, { w: 4, label: 'Orta' }, { w: 8, label: 'Kal\ın' }];
-const ERASER_SIZES = [{ s: 12, label: 'K\ü\ç\ük' }, { s: 24, label: 'Orta' }, { s: 40, label: 'B\üy\ük' }];
+const WIDTHS = [{ w: 2, label: 'İnce' }, { w: 4, label: 'Orta' }, { w: 8, label: 'Kalın' }];
+const ERASER_SIZES = [{ s: 12, label: 'Küçük' }, { s: 24, label: 'Orta' }, { s: 40, label: 'Büyük' }];
 
 const Toolbar = ({
   tool, setTool, penColor, setPenColor, penWidth, setPenWidth,
@@ -23,7 +23,7 @@ const Toolbar = ({
     borderRadius: 14, padding: '5px 6px',
     boxShadow: '0 4px 20px rgba(0,0,0,.08)', alignItems: 'center',
   }}>
-    {/* Ara\ç se\çimi */}
+    {/* Araç seçimi */}
     {TOOLS.map(([id, icon, title]) => (
       <button key={id} onClick={() => {
         setTool(id);
@@ -84,7 +84,7 @@ const Toolbar = ({
     <div style={{ width: 1, height: 22, background: 'rgba(0,0,0,.08)', margin: '0 2px' }} />
     <button onClick={undo} title="Geri al" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: strokes.length ? '#666' : '#ddd' }}>{'\↩'}</button>
     <button onClick={redo} title="Yinele" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: undone.length ? '#666' : '#ddd' }}>{'\↪'}</button>
-    <button onClick={clearDrawings} title="\Çizimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'🗑'}</button>
+    <button onClick={clearDrawings} title="Çizimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'🗑'}</button>
   </div>
 );
 

@@ -16,7 +16,7 @@ const ActivityModal = ({ activity, onClose }) => (
         padding: '10px 32px', borderRadius: 12, border: 'none',
         background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',
         color: '#fff', fontSize: 15, fontWeight: 800, cursor: 'pointer',
-      }}>{'Ba\şla \▸'}</button>
+      }}>{'Başla \▸'}</button>
     </div>
   </div>
 );

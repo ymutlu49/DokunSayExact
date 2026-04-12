@@ -7,15 +7,15 @@ const FeaturesTab = ({
   temp, changeTemp, setTemp,
 }) => (
   <div style={{ flex: 1, overflowY: 'auto', padding: '10px 12px' }}>
-    {/* G\ör\ün\üm */}
+    {/* Görünüm */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: '#555', marginBottom: 8 }}>G\ör\ün\üm</div>
-      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="🏗️" label="Dikey say\ı do\ğrusu" sub="Asans\ör / Deniz seviyesi" />
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: '#555', marginBottom: 8 }}>Görünüm</div>
+      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="🏗️" label="Dikey sayı doğrusu" sub="Asansör / Deniz seviyesi" />
     </div>
 
-    {/* Asans\ör Sim\ülasyonu */}
+    {/* Asansör Simülasyonu */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'🏢 Asans\ör Sim\ülasyonu'}</div>
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'🏢 Asansör Simülasyonu'}</div>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <div style={{ width: 60, background: 'linear-gradient(180deg,#e0e7ff,#dbeafe)', borderRadius: 10, padding: '4px', position: 'relative', height: 180 }}>
           {Array.from({ length: 11 }, (_, i) => {
@@ -28,7 +28,7 @@ const FeaturesTab = ({
                 color: v > 0 ? THEME.posB : v < 0 ? THEME.negB : THEME.accent,
                 background: v === elevator ? 'rgba(245,158,11,.2)' : 'transparent',
                 borderRadius: 4, transition: 'background .3s',
-              }}>{v === 0 ? 'Giri\ş' : v > 0 ? '+' + v : v}</div>
+              }}>{v === 0 ? 'Giriş' : v > 0 ? '+' + v : v}</div>
             );
           })}
           <div style={{
@@ -41,10 +41,10 @@ const FeaturesTab = ({
           <div style={{
             fontSize: 20, fontWeight: 900, textAlign: 'center', marginBottom: 8,
             color: elevator > 0 ? THEME.posB : elevator < 0 ? THEME.negB : THEME.accent,
-          }}>{elevator === 0 ? 'Giri\ş Kat\ı' : (elevator > 0 ? '+' : '') + elevator + '. Kat'}</div>
+          }}>{elevator === 0 ? 'Giriş Katı' : (elevator > 0 ? '+' : '') + elevator + '. Kat'}</div>
           <div style={{ display: 'flex', gap: 4, marginBottom: 4 }}>
-            <button onClick={() => moveElevator(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'\▲ Yukar\ı'}</button>
-            <button onClick={() => moveElevator(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\▼ A\şa\ğ\ı'}</button>
+            <button onClick={() => moveElevator(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'\▲ Yukarı'}</button>
+            <button onClick={() => moveElevator(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\▼ Aşağı'}</button>
           </div>
           <div style={{ display: 'flex', gap: 3 }}>
             {[3, -5, 2, -3].map((d) => (
@@ -59,7 +59,7 @@ const FeaturesTab = ({
             width: '100%', padding: '4px 0', borderRadius: 5, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'pointer', fontSize: 8, fontWeight: 700, color: '#999',
             fontFamily: 'inherit', marginTop: 3,
-          }}>{'\↺ Giri\şe d\ön'}</button>
+          }}>{'\↺ Girişe dön'}</button>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@ const FeaturesTab = ({
             width: '100%', padding: '4px 0', borderRadius: 5, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'pointer', fontSize: 8, fontWeight: 700, color: '#999',
             fontFamily: 'inherit', marginTop: 3,
-          }}>{'\↺ S\ıf\ırla'}</button>
+          }}>{'\↺ Sıfırla'}</button>
         </div>
       </div>
     </div>

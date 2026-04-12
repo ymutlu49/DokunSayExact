@@ -18,7 +18,7 @@ const Factory = ({
       borderRadius: 20, overflow: 'hidden',
       boxShadow: '0 8px 32px rgba(30,27,75,.4)', border: '2px solid rgba(255,255,255,.1)',
     }}>
-      {/* Ba\şl\ık */}
+      {/* Başlık */}
       <div onPointerDown={(e) => startPanelDrag('fab', e)} style={{
         background: 'linear-gradient(135deg,#a78bfa,#7c3aed)',
         padding: '8px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -26,7 +26,7 @@ const Factory = ({
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ fontSize: 16 }}>{'🏭'}</span>
-          <span style={{ fontSize: 12, fontWeight: 900, color: '#fff', letterSpacing: 1 }}>TAM-SAY FABR\İKASI</span>
+          <span style={{ fontSize: 12, fontWeight: 900, color: '#fff', letterSpacing: 1 }}>TAM-SAY FABRİKASI</span>
         </div>
         <button onClick={() => { setShowFactory(false); reset(); }} style={{
           background: 'rgba(255,255,255,.15)', border: 'none', color: '#fff',
@@ -34,9 +34,9 @@ const Factory = ({
         }}>{'\✕'}</button>
       </div>
 
-      {/* Ad\ım g\östergesi */}
+      {/* Adım göstergesi */}
       <div style={{ display: 'flex', padding: '6px 14px', gap: 4, background: 'rgba(255,255,255,.05)' }}>
-        {[['\① Y\ükle', 0], ['\② Kar\ı\şt\ır', 1], ['\③ Sonu\ç', 2]].map(([label, idx]) => (
+        {[['\① Yükle', 0], ['\② Karıştır', 1], ['\③ Sonuç', 2]].map(([label, idx]) => (
           <div key={idx} style={{
             flex: 1, padding: '3px 0', borderRadius: 6, textAlign: 'center', fontSize: 8, fontWeight: 800,
             background: step === idx ? 'rgba(245,158,11,.2)' : 'rgba(255,255,255,.05)',
@@ -46,13 +46,13 @@ const Factory = ({
         ))}
       </div>
 
-      {/* A\şama 1: Y\ükleme */}
+      {/* Aşama 1: Yükleme */}
       {step === 0 && (
         <div style={{ padding: '10px 14px' }}>
           <div style={{ display: 'flex', gap: 6 }}>
             {/* Pozitif hazne */}
             <div style={{ flex: 1, background: 'rgba(34,197,94,.08)', borderRadius: 12, padding: '8px', border: '1.5px solid rgba(34,197,94,.2)' }}>
-              <div style={{ fontSize: 8, fontWeight: 800, color: '#4ade80', textAlign: 'center', marginBottom: 4 }}>{'\⊕ POZ\İT\İF'}</div>
+              <div style={{ fontSize: 8, fontWeight: 800, color: '#4ade80', textAlign: 'center', marginBottom: 4 }}>{'\⊕ POZİTİF'}</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3, minHeight: 32 }}>
                 {Array.from({ length: posCount }, (_, i) => (
                   <div key={i} style={{ animation: 'popIn .2s', animationDelay: i * 0.05 + 's', animationFillMode: 'both' }}>
@@ -68,7 +68,7 @@ const Factory = ({
             </div>
             {/* Negatif hazne */}
             <div style={{ flex: 1, background: 'rgba(239,68,68,.08)', borderRadius: 12, padding: '8px', border: '1.5px solid rgba(239,68,68,.2)' }}>
-              <div style={{ fontSize: 8, fontWeight: 800, color: '#f87171', textAlign: 'center', marginBottom: 4 }}>{'\⊖ NEGAT\İF'}</div>
+              <div style={{ fontSize: 8, fontWeight: 800, color: '#f87171', textAlign: 'center', marginBottom: 4 }}>{'\⊖ NEGATİF'}</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 3, minHeight: 32 }}>
                 {Array.from({ length: negCount }, (_, i) => (
                   <div key={i} style={{ animation: 'popIn .2s', animationDelay: i * 0.05 + 's', animationFillMode: 'both' }}>
@@ -93,14 +93,14 @@ const Factory = ({
             background: (posCount === 0 && negCount === 0) ? 'rgba(255,255,255,.06)' : 'linear-gradient(135deg,#f59e0b,#d97706)',
             color: (posCount === 0 && negCount === 0) ? 'rgba(255,255,255,.2)' : '#fff',
             fontSize: 12, fontWeight: 800, cursor: (posCount === 0 && negCount === 0) ? 'default' : 'pointer', fontFamily: 'inherit',
-          }}>{'\⚙\️ Kar\ı\şt\ır \→'}</button>
+          }}>{'\⚙\️ Karıştır \→'}</button>
         </div>
       )}
 
-      {/* A\şama 2: Kar\ı\şt\ırma animasyonu */}
+      {/* Aşama 2: Karıştırma animasyonu */}
       {step === 1 && (
         <div style={{ padding: '14px', textAlign: 'center' }}>
-          <div style={{ fontSize: 11, color: 'rgba(255,255,255,.6)', marginBottom: 10 }}>Pullar kar\ı\şt\ır\ıl\ıyor...</div>
+          <div style={{ fontSize: 11, color: 'rgba(255,255,255,.6)', marginBottom: 10 }}>Pullar karıştırılıyor...</div>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 4, flexWrap: 'wrap', marginBottom: 8 }}>
             {Array.from({ length: posCount }, (_, i) => (
               <div key={'mp' + i} style={{ animation: 'popIn .3s', animationDelay: i * 0.1 + 's', animationFillMode: 'both' }}><Chip type="pos" size={11} /></div>
@@ -119,11 +119,11 @@ const Factory = ({
               ))}
             </div>
           )}
-          <div style={{ fontSize: 9, color: 'rgba(255,255,255,.4)' }}>S\ıf\ır \çiftleri e\şle\şiyor...</div>
+          <div style={{ fontSize: 9, color: 'rgba(255,255,255,.4)' }}>Sıfır çiftleri eşleşiyor...</div>
         </div>
       )}
 
-      {/* A\şama 3: Sonu\ç */}
+      {/* Aşama 3: Sonuç */}
       {step === 2 && (
         <div style={{ padding: '14px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 4, flexWrap: 'wrap', marginBottom: 8, minHeight: 28 }}>
@@ -135,13 +135,13 @@ const Factory = ({
             ))}
             {result === 0 && (
               <div style={{ animation: 'popIn .3s', padding: '4px 12px', borderRadius: 8, background: 'rgba(139,92,246,.15)' }}>
-                <span style={{ fontSize: 14, fontWeight: 900, color: '#a78bfa' }}>= 0 (T\üm\ü e\şle\şti!)</span>
+                <span style={{ fontSize: 14, fontWeight: 900, color: '#a78bfa' }}>= 0 (Tümü eşleşti!)</span>
               </div>
             )}
           </div>
-          {pairs > 0 && <div style={{ fontSize: 9, color: 'rgba(139,92,246,.6)', textAlign: 'center', marginBottom: 4 }}>{pairs + ' s\ıf\ır \çifti birbirini yok etti'}</div>}
+          {pairs > 0 && <div style={{ fontSize: 9, color: 'rgba(139,92,246,.6)', textAlign: 'center', marginBottom: 4 }}>{pairs + ' sıfır çifti birbirini yok etti'}</div>}
           <div style={{ background: 'rgba(255,255,255,.08)', borderRadius: 12, padding: '10px', textAlign: 'center', marginBottom: 8 }}>
-            <div style={{ fontSize: 9, color: 'rgba(255,255,255,.4)', marginBottom: 2 }}>Sonu\ç</div>
+            <div style={{ fontSize: 9, color: 'rgba(255,255,255,.4)', marginBottom: 2 }}>Sonuç</div>
             <div style={{ fontSize: 28, fontWeight: 900, color: result > 0 ? '#4ade80' : result < 0 ? '#f87171' : '#a78bfa' }}>
               {result > 0 ? '+' + result : result === 0 ? '0' : '' + result}
             </div>

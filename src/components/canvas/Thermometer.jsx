@@ -13,7 +13,7 @@ const Thermometer = ({ temp, changeTemp, setTemp, panelPos, startPanelDrag, rese
       padding: '2px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none',
     }}>
       <div style={{ width: 24, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.12)' }} />
-      <span style={{ fontSize: 7, fontWeight: 700, color: 'rgba(0,0,0,.15)' }}>s\ür\ükle</span>
+      <span style={{ fontSize: 7, fontWeight: 700, color: 'rgba(0,0,0,.15)' }}>sürükle</span>
       <div style={{ width: 24, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.12)' }} />
       {panelPos && (
         <button onClick={(e) => { e.stopPropagation(); resetPosition('tm'); }} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 8, color: '#bbb' }}>{'\↩'}</button>

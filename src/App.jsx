@@ -332,7 +332,7 @@ const App = () => {
             {sidebarDrag && dropHighlight && (
               <div style={{ position: 'absolute', inset: 0, zIndex: 0, border: '3px dashed rgba(245,158,11,.4)', borderRadius: 4, pointerEvents: 'none' }}>
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', background: THEME.accentL, padding: '8px 20px', borderRadius: 12 }}>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'📥 Buraya b\ırak'}</span>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'📥 Buraya bırak'}</span>
                 </div>
               </div>
             )}
@@ -341,7 +341,7 @@ const App = () => {
             {items.length === 0 && !showTray && !showFactory && !showNumberLine && !showThermometer && strokes.length === 0 && (
               <div style={{ position: 'absolute', top: '35%', left: '50%', transform: 'translate(-50%,-50%)', textAlign: 'center', pointerEvents: 'none', animation: 'fadeIn .6s' }}>
                 <div style={{ fontSize: 44, marginBottom: 8, animation: 'float 4s ease-in-out infinite' }}>{'\⊕ \⊖'}</div>
-                <div style={{ fontSize: 16, fontWeight: 800, color: 'rgba(60,50,30,.12)' }}>Pullar\ı s\ür\ükleyerek tam say\ılar\ı ke\şfet!</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: 'rgba(60,50,30,.12)' }}>Pulları sürükleyerek tam sayıları keşfet!</div>
               </div>
             )}
 
@@ -369,13 +369,13 @@ const App = () => {
           }}>
             <span style={{ fontSize: overTrash ? 20 : 14, transition: 'font-size .2s' }}>{overTrash ? '🗑️' : '🗑'}</span>
             <span style={{ fontSize: 10, fontWeight: 700, color: overTrash ? THEME.red : itemDrag ? '#aaa' : '#ccc' }}>
-              {overTrash ? 'B\ırak \→ Sil' : itemDrag ? 'Buraya s\ür\ükle \→ Sil' : 'Silme Alan\ı'}
+              {overTrash ? 'Bırak \→ Sil' : itemDrag ? 'Buraya sürükle \→ Sil' : 'Silme Alanı'}
             </span>
           </div>
 
           {/* Credits */}
           <div style={{ position: 'absolute', bottom: 10, right: 12, fontSize: 10, fontWeight: 700, color: 'rgba(60,50,30,.06)', pointerEvents: 'none' }}>
-            Prof. Dr. Y\ılmaz Mutlu \• Rumeysa Durgun
+            Prof. Dr. Yılmaz Mutlu \• Rumeysa Durgun
           </div>
         </div>
       </div>
@@ -400,7 +400,7 @@ const App = () => {
           )}
           {sidebarDrag.t === 'tool' && (
             <div style={{ padding: '6px 14px', borderRadius: 10, background: '#fff', border: '2px solid ' + THEME.accent, boxShadow: '0 4px 16px rgba(0,0,0,.15)', fontSize: 12, fontWeight: 800, color: THEME.text }}>
-              {sidebarDrag.v === 'tray' ? '🧮 \İ\şlem Tepsisi' : sidebarDrag.v === 'fab' ? '🏭 Fabrika' : sidebarDrag.v === 'tm' ? '🌡️ Termometre' : '📏 Say\ı Do\ğrusu'}
+              {sidebarDrag.v === 'tray' ? '🧮 İşlem Tepsisi' : sidebarDrag.v === 'fab' ? '🏭 Fabrika' : sidebarDrag.v === 'tm' ? '🌡️ Termometre' : '📏 Sayı Doğrusu'}
             </div>
           )}
         </div>

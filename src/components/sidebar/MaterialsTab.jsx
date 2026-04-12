@@ -58,10 +58,10 @@ const MaterialsTab = ({
       </div>
     </div>
 
-    {/* S\ıf\ır \Çifti */}
+    {/* Sıfır Çifti */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'🟣 S\ıf\ır \Çifti'}</div>
+        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'🟣 Sıfır Çifti'}</div>
         <span style={{ fontSize: 8, color: '#aaa' }}>{'(+1)+(\−1)=0'}</span>
       </div>
       <button onClick={addZeroPair} style={{
@@ -71,13 +71,13 @@ const MaterialsTab = ({
       }}>{'\⊕\⊖ Ekle'}</button>
     </div>
 
-    {/* Ara\çlar */}
+    {/* Araçlar */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accentD, marginBottom: 4 }}>
-        {'⚙️ Ara\çlar'}
+        {'⚙️ Araçlar'}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-        {/* \İ\şlem Tepsisi */}
+        {/* İşlem Tepsisi */}
         {showTray ? (
           <button onClick={() => { setShowTray(false); resetTray(); }} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(245,158,11,.3)',
@@ -90,7 +90,7 @@ const MaterialsTab = ({
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.accentD, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'🧮 \İ\şlem Tepsisi'}
+            {'🧮 İşlem Tepsisi'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -100,14 +100,14 @@ const MaterialsTab = ({
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(124,58,237,.3)',
             background: 'rgba(124,58,237,.06)', cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: '#7c3aed', fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\✕ Fabrikay\ı Kapat'}</button>
+          }}>{'\✕ Fabrikayı Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'fab', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(0,0,0,.06)',
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: '#7c3aed', touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'🏭 Tam-Say Fabrikas\ı'}
+            {'🏭 Tam-Say Fabrikası'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -128,33 +128,33 @@ const MaterialsTab = ({
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
-        {/* Say\ı Do\ğrusu */}
+        {/* Sayı Doğrusu */}
         {showNumberLine ? (
           <button onClick={() => { setShowNumberLine(false); resetNlPosition(); }} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(59,130,246,.3)',
             background: 'rgba(59,130,246,.06)', cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: THEME.blue, fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\✕ Say\ı Do\ğrusunu Kapat'}</button>
+          }}>{'\✕ Sayı Doğrusunu Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'nl', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(0,0,0,.06)',
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.blue, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'📏 Say\ı Do\ğrusu'}
+            {'📏 Sayı Doğrusu'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
       </div>
     </div>
 
-    {/* Say\ı do\ğrusu kontrolleri */}
+    {/* Sayı doğrusu kontrolleri */}
     {showNumberLine && (
       <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(59,130,246,.1)' }}>
         <div style={{ display: 'flex', gap: 2, marginBottom: 3 }}>
           <button onClick={() => walkStep('left')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\◀ Sola'}</button>
           <button onClick={() => { resetNumberLine(); }} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(139,92,246,.2)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: '#6d28d9', fontFamily: 'inherit' }}>{'\⊙'}</button>
-          <button onClick={() => walkStep('right')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'Sa\ğa \▶'}</button>
+          <button onClick={() => walkStep('right')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'Sağa \▶'}</button>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
           <button onClick={() => animateNumberLine(0, 4)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit' }}>{'0\→+4'}</button>
@@ -165,10 +165,10 @@ const MaterialsTab = ({
       </div>
     )}
 
-    {/* \İ\şaret & Say\ı Kartlar\ı */}
+    {/* İşaret & Sayı Kartları */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accent, marginBottom: 4 }}>
-        {'\İ\şaret & Say\ı Kartlar\ı'}
+        {'İşaret & Sayı Kartları'}
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2, marginBottom: 4 }}>
         {['+', '\−', '\×', '\÷', '=', '<', '>'].map((op) => (
@@ -195,13 +195,13 @@ const MaterialsTab = ({
       </div>
     </div>
 
-    {/* \Örnek & Temizle */}
+    {/* Örnek & Temizle */}
     <div style={{ display: 'flex', gap: 4 }}>
       <button onClick={() => { addChips('pos', 3); addChips('neg', 2); }} style={{
         flex: 1, padding: '7px 0', borderRadius: 8, border: 'none',
         background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',
         color: '#fff', fontSize: 10, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit',
-      }}>{'\⚡ \Örnek'}</button>
+      }}>{'\⚡ Örnek'}</button>
       <button onClick={clearAll} style={{
         flex: 1, padding: '7px 0', borderRadius: 8,
         border: '1.5px solid ' + THEME.sideB, background: '#fff',

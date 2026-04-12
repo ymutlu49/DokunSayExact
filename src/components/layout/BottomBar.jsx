@@ -11,7 +11,7 @@ const BottomBar = ({
     display: 'flex', alignItems: 'center', padding: '0 20px', gap: 10,
   }}>
     {/* Arka plan deseni */}
-    {[['D\üz', 'plain'], ['Kareli', 'grid'], ['Noktal\ı', 'dot']].map(([label, value]) => (
+    {[['Düz', 'plain'], ['Kareli', 'grid'], ['Noktalı', 'dot']].map(([label, value]) => (
       <button
         key={value}
         onClick={() => setBgType(value)}
@@ -80,7 +80,7 @@ const BottomBar = ({
 
     <div style={{ flex: 1 }} />
 
-    {/* Alt bar butonlar\ı */}
+    {/* Alt bar butonları */}
     {[
       { icon: '?', onClick: () => setShowHelp(true) },
       { icon: '\ℹ', onClick: () => setShowAbout(true) },

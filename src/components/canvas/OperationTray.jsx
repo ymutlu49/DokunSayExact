@@ -49,13 +49,13 @@ const OperationTray = ({
   } : {
     position: 'absolute', top: 54, left: '50%', transform: 'translateX(-50%)', zIndex: 6, animation: 'slideDown .3s',
   }}>
-    {/* S\ür\ükleme tutamac\ı */}
+    {/* Sürükleme tutamacı */}
     <div onPointerDown={(e) => startPanelDrag('tray', e)} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
       padding: '2px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none', marginBottom: 2,
     }}>
       <div style={{ width: 30, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.1)' }} />
-      <span style={{ fontSize: 7, color: 'rgba(0,0,0,.15)' }}>s\ür\ükle</span>
+      <span style={{ fontSize: 7, color: 'rgba(0,0,0,.15)' }}>sürükle</span>
       <div style={{ width: 30, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.1)' }} />
     </div>
 
@@ -74,7 +74,7 @@ const OperationTray = ({
         ))}
       </div>
 
-      <TrayChips chips={trayB} onAdd={(t) => setTrayB((p) => [...p, t])} onRemove={(i) => setTrayB((p) => p.filter((_, j) => j !== i))} label="Sa\ğ Tepsi" />
+      <TrayChips chips={trayB} onAdd={(t) => setTrayB((p) => [...p, t])} onRemove={(i) => setTrayB((p) => p.filter((_, j) => j !== i))} label="Sağ Tepsi" />
 
       <div style={{ fontSize: 28, fontWeight: 900, color: '#999' }}>{'\→'}</div>
 
@@ -93,7 +93,7 @@ const OperationTray = ({
               border: '1px solid rgba(255,255,255,.3)', background: 'rgba(255,255,255,.1)',
               cursor: 'pointer', fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,.7)',
               fontFamily: 'inherit',
-            }}>{'\↺ S\ıf\ırla'}</button>
+            }}>{'\↺ Sıfırla'}</button>
           </div>
         ) : (
           <button onClick={calculate} style={{
