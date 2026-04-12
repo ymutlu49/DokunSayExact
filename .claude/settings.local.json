@@ -8,7 +8,10 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(gh api:*)",
       "Bash(gh run:*)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(python -c ':*)",
+      "Bash(python fix_emoji.py)",
+      "Bash(python fix_emoji2.py)"
     ]
   }
 }
