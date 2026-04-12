@@ -11,18 +11,18 @@ const NumberLine = ({ position, jumps, walkDirection, animateNumberLine, panelPo
     zIndex: 3,
     width: panelPos ? '70%' : undefined,
   }}>
-    {/* S\u00fcr\u00fckleme tutamac\u0131 */}
+    {/* S\ür\ükleme tutamac\ı */}
     <div onPointerDown={(e) => startPanelDrag('nl', e)} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
       padding: '3px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none',
     }}>
       <div style={{ width: 40, height: 5, borderRadius: 3, background: 'rgba(0,0,0,.12)' }} />
-      <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(0,0,0,.2)' }}>{'\uD83D\uDCCF s\u00fcr\u00fckle'}</span>
+      <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(0,0,0,.2)' }}>{'\�\� s\ür\ükle'}</span>
       <div style={{ width: 40, height: 5, borderRadius: 3, background: 'rgba(0,0,0,.12)' }} />
       {panelPos && (
         <button onClick={(e) => { e.stopPropagation(); resetPosition('nl'); }} style={{
           position: 'absolute', right: 4, top: 2, background: 'none', border: 'none', cursor: 'pointer', fontSize: 10, color: '#bbb',
-        }}>{'\u21a9'}</button>
+        }}>{'\↩'}</button>
       )}
     </div>
 
@@ -32,15 +32,15 @@ const NumberLine = ({ position, jumps, walkDirection, animateNumberLine, panelPo
       boxShadow: '0 4px 24px rgba(0,0,0,.08)', border: '1.5px solid rgba(0,0,0,.06)',
     }}>
       <svg width="100%" height={160} viewBox="0 0 840 160" preserveAspectRatio="xMidYMid meet">
-        {/* Arka plan renk b\u00f6lgeleri */}
+        {/* Arka plan renk b\ölgeleri */}
         <rect x={20} y={70} width={400} height={40} rx={4} fill="rgba(239,68,68,.04)" />
         <rect x={420} y={70} width={400} height={40} rx={4} fill="rgba(34,197,94,.04)" />
-        {/* Ana \u00e7izgi */}
+        {/* Ana \çizgi */}
         <line x1={20} y1={90} x2={820} y2={90} stroke={THEME.border} strokeWidth={3} />
         <polygon points="815,84 828,90 815,96" fill={THEME.border} />
         <polygon points="25,84 12,90 25,96" fill={THEME.border} />
 
-        {/* Tick marks ve say\u0131lar */}
+        {/* Tick marks ve say\ılar */}
         {Array.from({ length: 21 }, (_, i) => {
           const v = i - 10;
           const x = 20 + (i / 20) * 800;
@@ -57,17 +57,17 @@ const NumberLine = ({ position, jumps, walkDirection, animateNumberLine, panelPo
           );
         })}
 
-        {/* Y\u00f6n etiketleri */}
+        {/* Y\ön etiketleri */}
         <g>
           <rect x={24} y={56} width={80} height={18} rx={9} fill={THEME.neg} />
-          <text x={64} y={68} textAnchor="middle" fontSize={10} fontWeight={800} fill="#fff">{'\u25c0 Negatif'}</text>
+          <text x={64} y={68} textAnchor="middle" fontSize={10} fontWeight={800} fill="#fff">{'\◀ Negatif'}</text>
         </g>
         <g>
           <rect x={736} y={56} width={80} height={18} rx={9} fill={THEME.pos} />
-          <text x={776} y={68} textAnchor="middle" fontSize={10} fontWeight={800} fill="#fff">{'Pozitif \u25b6'}</text>
+          <text x={776} y={68} textAnchor="middle" fontSize={10} fontWeight={800} fill="#fff">{'Pozitif \▶'}</text>
         </g>
 
-        {/* Y\u00fcr\u00fcyen \u0130nsan */}
+        {/* Y\ür\üyen \İnsan */}
         <g transform="translate(0,88)">
           {position !== null ? (
             <WalkingPerson dir={walkDirection} x={20 + ((position + 10) / 20) * 800} color={position > 0 ? THEME.pos : position < 0 ? THEME.neg : THEME.accent} />

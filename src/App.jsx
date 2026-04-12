@@ -91,7 +91,7 @@ const App = () => {
   if (posCount > 0 || negCount > 0) {
     const parts = [];
     if (posCount > 0) parts.push('(+' + posCount + ')');
-    if (negCount > 0) parts.push('(\u2212' + negCount + ')');
+    if (negCount > 0) parts.push('(\−' + negCount + ')');
     symExpr = parts.join(' + ') + ' = ' + (netValue >= 0 ? '+' : '') + netValue;
   }
 
@@ -323,8 +323,8 @@ const App = () => {
             {/* Game indicator */}
             {game && (
               <div style={{ position: 'absolute', top: 56, left: 16, zIndex: 4, padding: '6px 14px', borderRadius: 10, background: 'rgba(245,158,11,.1)', border: '1.5px solid rgba(245,158,11,.2)' }}>
-                <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'\uD83C\uDFC6 ' + game.score}</span>
-                {game.feedback === 'correct' && <span style={{ marginLeft: 8, fontSize: 18, animation: 'popIn .3s' }}>{'\uD83C\uDF89'}</span>}
+                <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'\�\� ' + game.score}</span>
+                {game.feedback === 'correct' && <span style={{ marginLeft: 8, fontSize: 18, animation: 'popIn .3s' }}>{'\�\�'}</span>}
               </div>
             )}
 
@@ -332,7 +332,7 @@ const App = () => {
             {sidebarDrag && dropHighlight && (
               <div style={{ position: 'absolute', inset: 0, zIndex: 0, border: '3px dashed rgba(245,158,11,.4)', borderRadius: 4, pointerEvents: 'none' }}>
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', background: THEME.accentL, padding: '8px 20px', borderRadius: 12 }}>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'\uD83D\uDCE5 Buraya b\u0131rak'}</span>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'\�\� Buraya b\ırak'}</span>
                 </div>
               </div>
             )}
@@ -340,8 +340,8 @@ const App = () => {
             {/* Empty state */}
             {items.length === 0 && !showTray && !showFactory && !showNumberLine && !showThermometer && strokes.length === 0 && (
               <div style={{ position: 'absolute', top: '35%', left: '50%', transform: 'translate(-50%,-50%)', textAlign: 'center', pointerEvents: 'none', animation: 'fadeIn .6s' }}>
-                <div style={{ fontSize: 44, marginBottom: 8, animation: 'float 4s ease-in-out infinite' }}>{'\u2295 \u2296'}</div>
-                <div style={{ fontSize: 16, fontWeight: 800, color: 'rgba(60,50,30,.12)' }}>Pullar\u0131 s\u00fcr\u00fckleyerek tam say\u0131lar\u0131 ke\u015ffet!</div>
+                <div style={{ fontSize: 44, marginBottom: 8, animation: 'float 4s ease-in-out infinite' }}>{'\⊕ \⊖'}</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: 'rgba(60,50,30,.12)' }}>Pullar\ı s\ür\ükleyerek tam say\ılar\ı ke\şfet!</div>
               </div>
             )}
 
@@ -367,15 +367,15 @@ const App = () => {
             borderTop: overTrash ? '2px solid ' + THEME.red : '1px solid rgba(0,0,0,.05)',
             zIndex: 20, transition: 'background .2s',
           }}>
-            <span style={{ fontSize: overTrash ? 20 : 14, transition: 'font-size .2s' }}>{overTrash ? '\uD83D\uDDD1\uFE0F' : '\uD83D\uDDD1'}</span>
+            <span style={{ fontSize: overTrash ? 20 : 14, transition: 'font-size .2s' }}>{overTrash ? '\�\�\️' : '\�\�'}</span>
             <span style={{ fontSize: 10, fontWeight: 700, color: overTrash ? THEME.red : itemDrag ? '#aaa' : '#ccc' }}>
-              {overTrash ? 'B\u0131rak \u2192 Sil' : itemDrag ? 'Buraya s\u00fcr\u00fckle \u2192 Sil' : 'Silme Alan\u0131'}
+              {overTrash ? 'B\ırak \→ Sil' : itemDrag ? 'Buraya s\ür\ükle \→ Sil' : 'Silme Alan\ı'}
             </span>
           </div>
 
           {/* Credits */}
           <div style={{ position: 'absolute', bottom: 10, right: 12, fontSize: 10, fontWeight: 700, color: 'rgba(60,50,30,.06)', pointerEvents: 'none' }}>
-            Prof. Dr. Y\u0131lmaz Mutlu \u2022 Rumeysa Durgun
+            Prof. Dr. Y\ılmaz Mutlu \• Rumeysa Durgun
           </div>
         </div>
       </div>
@@ -400,7 +400,7 @@ const App = () => {
           )}
           {sidebarDrag.t === 'tool' && (
             <div style={{ padding: '6px 14px', borderRadius: 10, background: '#fff', border: '2px solid ' + THEME.accent, boxShadow: '0 4px 16px rgba(0,0,0,.15)', fontSize: 12, fontWeight: 800, color: THEME.text }}>
-              {sidebarDrag.v === 'tray' ? '\uD83E\uDDEE \u0130\u015flem Tepsisi' : sidebarDrag.v === 'fab' ? '\uD83C\uDFED Fabrika' : sidebarDrag.v === 'tm' ? '\uD83C\uDF21\uFE0F Termometre' : '\uD83D\uDCCF Say\u0131 Do\u011frusu'}
+              {sidebarDrag.v === 'tray' ? '\�\� \İ\şlem Tepsisi' : sidebarDrag.v === 'fab' ? '\�\� Fabrika' : sidebarDrag.v === 'tm' ? '\�\�\️ Termometre' : '\�\� Say\ı Do\ğrusu'}
             </div>
           )}
         </div>

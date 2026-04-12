@@ -13,27 +13,27 @@ const TeacherPanel = ({
       background: '#fff', borderRadius: 24, padding: '28px 32px', maxWidth: 580,
       width: '92%', maxHeight: '90vh', overflowY: 'auto', animation: 'popIn .3s',
     }}>
-      <div style={{ fontSize: 22, fontWeight: 900, marginBottom: 16 }}>{'\uD83D\uDC68\u200D\uD83C\uDFEB \u00d6\u011fretmen Paneli'}</div>
+      <div style={{ fontSize: 22, fontWeight: 900, marginBottom: 16 }}>{'\�\�\‍\�\� \Ö\ğretmen Paneli'}</div>
 
-      {/* \u00d6\u011frenci bilgileri */}
+      {/* \Ö\ğrenci bilgileri */}
       <div style={{ background: THEME.accentL, borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(245,158,11,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\uD83D\uDC64 \u00d6\u011frenci'}</div>
+        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\�\� \Ö\ğrenci'}</div>
         <div style={{ display: 'flex', gap: 8 }}>
           <input value={studentName} onChange={(e) => setStudentName(e.target.value)} placeholder="Ad..." style={{
             flex: 2, padding: '7px 10px', borderRadius: 8, border: '1.5px solid #ddd',
             fontSize: 12, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box',
           }} />
-          <input value={studentClass} onChange={(e) => setStudentClass(e.target.value)} placeholder="S\u0131n\u0131f..." style={{
+          <input value={studentClass} onChange={(e) => setStudentClass(e.target.value)} placeholder="S\ın\ıf..." style={{
             flex: 1, padding: '7px 10px', borderRadius: 8, border: '1.5px solid #ddd',
             fontSize: 12, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box',
           }} />
         </div>
       </div>
 
-      {/* \u0130lerleme */}
+      {/* \İlerleme */}
       <div style={{ background: 'rgba(34,197,94,.04)', borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(34,197,94,.12)' }}>
         <div style={{ fontSize: 10, fontWeight: 800, color: THEME.green, marginBottom: 8 }}>
-          {'\u2705 \u0130lerleme \u2014 ' + Object.keys(completed).length + '/' + ACTIVITIES.length}
+          {'\✅ \İlerleme \— ' + Object.keys(completed).length + '/' + ACTIVITIES.length}
         </div>
         <div style={{ width: '100%', height: 6, borderRadius: 3, background: '#eee', marginBottom: 8 }}>
           <div style={{ height: 6, borderRadius: 3, background: THEME.green, width: (Object.keys(completed).length / ACTIVITIES.length * 100) + '%' }} />
@@ -52,15 +52,15 @@ const TeacherPanel = ({
                 border: done ? '1.5px solid rgba(34,197,94,.3)' : '1px solid #e5e5e5',
                 cursor: 'pointer', fontSize: 9, fontWeight: done ? 700 : 500,
                 color: done ? THEME.green : '#888',
-              }}>{done ? '\u2705 ' : ''}{a.name}</div>
+              }}>{done ? '\✅ ' : ''}{a.name}</div>
             );
           })}
         </div>
       </div>
 
-      {/* Ders planlar\u0131 */}
+      {/* Ders planlar\ı */}
       <div style={{ background: 'rgba(139,92,246,.04)', borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(139,92,246,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: '#6d28d9', marginBottom: 8 }}>{'\uD83D\uDCDA Ders Planlar\u0131'}</div>
+        <div style={{ fontSize: 10, fontWeight: 800, color: '#6d28d9', marginBottom: 8 }}>{'\�\� Ders Planlar\ı'}</div>
         {LESSONS.map((ls, li) => {
           const indices = ls.activityIndices || [];
           const doneCount = indices.filter((ai) => completed[ACTIVITIES[ai]?.name]).length;
@@ -80,8 +80,8 @@ const TeacherPanel = ({
 
       {/* Notlar */}
       <div style={{ background: THEME.accentL, borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(245,158,11,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\uD83D\uDCDD Notlar'}</div>
-        <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="G\u00f6zlemler..." rows={3} style={{
+        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\�\� Notlar'}</div>
+        <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="G\özlemler..." rows={3} style={{
           width: '100%', padding: '8px', borderRadius: 8, border: '1.5px solid #ddd',
           fontSize: 12, fontFamily: 'inherit', outline: 'none', resize: 'vertical', boxSizing: 'border-box',
         }} />
@@ -93,7 +93,7 @@ const TeacherPanel = ({
           padding: '8px 20px', borderRadius: 10, border: '1.5px solid ' + THEME.red,
           background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 12, fontWeight: 700,
           color: THEME.red, fontFamily: 'inherit',
-        }}>{'\u21ba S\u0131f\u0131rla'}</button>
+        }}>{'\↺ S\ıf\ırla'}</button>
         <button onClick={() => {
           const data = {
             student: studentName, class: studentClass, notes,
@@ -109,7 +109,7 @@ const TeacherPanel = ({
           padding: '8px 20px', borderRadius: 10, border: '1.5px solid ' + THEME.blue,
           background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 12, fontWeight: 700,
           color: THEME.blue, fontFamily: 'inherit',
-        }}>{'\uD83D\uDCE5 Rapor'}</button>
+        }}>{'\�\� Rapor'}</button>
         <button onClick={onClose} style={{
           padding: '8px 24px', borderRadius: 10, border: 'none',
           background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',

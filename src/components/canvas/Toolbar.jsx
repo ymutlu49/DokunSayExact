@@ -1,15 +1,15 @@
 import { THEME } from '../../constants/theme';
 
 const TOOLS = [
-  ['select', '\uD83D\uDDB1\uFE0F', 'Se\u00e7'],
-  ['pen', '\u270f\uFE0F', 'Kalem'],
-  ['highlighter', '\uD83D\uDD8D\uFE0F', 'Vurgula'],
-  ['eraser', '\uD83E\uDDF9', 'Silgi'],
+  ['select', '\�\�\️', 'Se\ç'],
+  ['pen', '\✏\️', 'Kalem'],
+  ['highlighter', '\�\�\️', 'Vurgula'],
+  ['eraser', '\�\�', 'Silgi'],
 ];
 
 const COLORS = ['#1a1a1a', '#ef4444', '#3b82f6', '#22c55e', '#f59e0b', '#8b5cf6', '#ec4899', '#fff'];
-const WIDTHS = [{ w: 2, label: '\u0130nce' }, { w: 4, label: 'Orta' }, { w: 8, label: 'Kal\u0131n' }];
-const ERASER_SIZES = [{ s: 12, label: 'K\u00fc\u00e7\u00fck' }, { s: 24, label: 'Orta' }, { s: 40, label: 'B\u00fcy\u00fck' }];
+const WIDTHS = [{ w: 2, label: '\İnce' }, { w: 4, label: 'Orta' }, { w: 8, label: 'Kal\ın' }];
+const ERASER_SIZES = [{ s: 12, label: 'K\ü\ç\ük' }, { s: 24, label: 'Orta' }, { s: 40, label: 'B\üy\ük' }];
 
 const Toolbar = ({
   tool, setTool, penColor, setPenColor, penWidth, setPenWidth,
@@ -23,7 +23,7 @@ const Toolbar = ({
     borderRadius: 14, padding: '5px 6px',
     boxShadow: '0 4px 20px rgba(0,0,0,.08)', alignItems: 'center',
   }}>
-    {/* Ara\u00e7 se\u00e7imi */}
+    {/* Ara\ç se\çimi */}
     {TOOLS.map(([id, icon, title]) => (
       <button key={id} onClick={() => {
         setTool(id);
@@ -82,9 +82,9 @@ const Toolbar = ({
     )}
 
     <div style={{ width: 1, height: 22, background: 'rgba(0,0,0,.08)', margin: '0 2px' }} />
-    <button onClick={undo} title="Geri al" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: strokes.length ? '#666' : '#ddd' }}>{'\u21a9'}</button>
-    <button onClick={redo} title="Yinele" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: undone.length ? '#666' : '#ddd' }}>{'\u21aa'}</button>
-    <button onClick={clearDrawings} title="\u00c7izimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'\uD83D\uDDD1'}</button>
+    <button onClick={undo} title="Geri al" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: strokes.length ? '#666' : '#ddd' }}>{'\↩'}</button>
+    <button onClick={redo} title="Yinele" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: undone.length ? '#666' : '#ddd' }}>{'\↪'}</button>
+    <button onClick={clearDrawings} title="\Çizimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'\�\�'}</button>
   </div>
 );
 

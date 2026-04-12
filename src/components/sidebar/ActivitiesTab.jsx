@@ -1,7 +1,7 @@
 import { ACTIVITIES, CATEGORY_LABELS, CATEGORY_COLORS } from '../../constants/activities';
 import { THEME } from '../../constants/theme';
 
-const CATEGORY_ORDER = ['ke\u015fif', 'kavram', 'i\u015flem', 'kar\u015f\u0131la\u015ft\u0131r', 'senaryo', 'yan\u0131lg\u0131'];
+const CATEGORY_ORDER = ['ke\şif', 'kavram', 'i\şlem', 'kar\ş\ıla\şt\ır', 'senaryo', 'yan\ılg\ı'];
 
 const ActivitiesTab = ({ activeTemplate, setActiveTemplate, setInstructionScreen }) => (
   <div style={{ flex: 1, overflowY: 'auto', padding: '8px 12px' }}>
@@ -39,7 +39,7 @@ const ActivitiesTab = ({ activeTemplate, setActiveTemplate, setInstructionScreen
                   {activity.name}
                 </span>
                 <span style={{ fontSize: 7, color: '#d97706' }}>
-                  {'\u2605'.repeat(activity.difficulty)}
+                  {'\★'.repeat(activity.difficulty)}
                 </span>
               </button>
             );

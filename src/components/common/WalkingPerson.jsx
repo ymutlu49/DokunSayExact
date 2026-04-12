@@ -23,7 +23,7 @@ const WalkingPerson = ({ dir = 'idle', x = 0, color }) => {
       <g transform={`scale(${flip},1)`}>
         {/* Kafa */}
         <circle cx={0} cy={-38} r={8} fill={personColor} stroke="#fff" strokeWidth={1.5} />
-        {/* G\u00f6vde */}
+        {/* G\övde */}
         <line x1={0} y1={-30} x2={0} y2={-12} stroke={personColor} strokeWidth={3} strokeLinecap="round" />
         {/* Kollar */}
         <line x1={0} y1={-24} x2={walking ? -8 : -6} y2={walking ? -16 : -20} stroke={personColor} strokeWidth={2.5} strokeLinecap="round" style={walkArmStyle} />
@@ -31,7 +31,7 @@ const WalkingPerson = ({ dir = 'idle', x = 0, color }) => {
         {/* Bacaklar */}
         <line x1={0} y1={-12} x2={walking ? -6 : -4} y2={0} stroke={personColor} strokeWidth={2.5} strokeLinecap="round" style={walkLegStyle} />
         <line x1={0} y1={-12} x2={walking ? 6 : 4} y2={0} stroke={personColor} strokeWidth={2.5} strokeLinecap="round" style={walkLegReverseStyle} />
-        {/* Y\u00fcz */}
+        {/* Y\üz */}
         <circle cx={-2} cy={-40} r={1.2} fill="#fff" />
         <circle cx={3} cy={-40} r={1.2} fill="#fff" />
         <path

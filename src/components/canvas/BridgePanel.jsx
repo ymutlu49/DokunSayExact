@@ -13,7 +13,7 @@ const BridgePanel = ({ posCount, negCount, zeroPairs, netValue, symExpr, animate
     boxShadow: '0 4px 20px rgba(0,0,0,.06)',
     overflow: 'hidden', width: 180,
   }}>
-    {/* S\u00fcr\u00fckleme tutamac\u0131 */}
+    {/* S\ür\ükleme tutamac\ı */}
     <div onPointerDown={(e) => startPanelDrag('bridge', e)} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
       padding: '3px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none',
@@ -28,32 +28,32 @@ const BridgePanel = ({ posCount, negCount, zeroPairs, netValue, symExpr, animate
       <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Chip type="pos" size={10} />
-          <span style={{ fontSize: 12, fontWeight: 900, color: THEME.posB }}>{'\u00d7' + posCount}</span>
+          <span style={{ fontSize: 12, fontWeight: 900, color: THEME.posB }}>{'\×' + posCount}</span>
         </div>
         <span style={{ fontSize: 10, color: '#ccc' }}>+</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Chip type="neg" size={10} />
-          <span style={{ fontSize: 12, fontWeight: 900, color: THEME.negB }}>{'\u00d7' + negCount}</span>
+          <span style={{ fontSize: 12, fontWeight: 900, color: THEME.negB }}>{'\×' + negCount}</span>
         </div>
       </div>
       {zeroPairs > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 3 }}>
           <div style={{ display: 'flex' }}><Chip type="pos" size={7} /><Chip type="neg" size={7} /></div>
-          <span style={{ fontSize: 8, color: '#6d28d9', fontWeight: 700 }}>{zeroPairs + ' s\u0131f\u0131r \u00e7ifti'}</span>
+          <span style={{ fontSize: 8, color: '#6d28d9', fontWeight: 700 }}>{zeroPairs + ' s\ıf\ır \çifti'}</span>
         </div>
       )}
     </div>
 
     {/* Sembolik ifade */}
     <div style={{ padding: '6px 12px', background: 'rgba(245,158,11,.04)', borderBottom: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 8, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accentD, marginBottom: 2 }}>Sembolik \u0130fade</div>
+      <div style={{ fontSize: 8, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accentD, marginBottom: 2 }}>Sembolik \İfade</div>
       <div style={{ fontSize: 13, fontWeight: 900, color: THEME.text, fontFamily: "'Courier New',monospace" }}>{symExpr}</div>
     </div>
 
-    {/* Sonu\u00e7 */}
+    {/* Sonu\ç */}
     <div style={{ padding: '6px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <div>
-        <div style={{ fontSize: 8, color: '#888', fontWeight: 700 }}>Sonu\u00e7</div>
+        <div style={{ fontSize: 8, color: '#888', fontWeight: 700 }}>Sonu\ç</div>
         <div style={{ fontSize: 24, fontWeight: 900, color: netValue > 0 ? THEME.posB : netValue < 0 ? THEME.negB : '#6d28d9' }}>
           {netValue > 0 ? '+' + netValue : netValue === 0 ? '0' : '' + netValue}
         </div>
@@ -63,7 +63,7 @@ const BridgePanel = ({ posCount, negCount, zeroPairs, netValue, symExpr, animate
           padding: '4px 8px', borderRadius: 6, border: '1px solid rgba(59,130,246,.2)',
           background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 700,
           color: THEME.blue, fontFamily: 'inherit',
-        }}>{'\uD83D\uDCCF Do\u011fruda G\u00f6ster'}</button>
+        }}>{'\�\� Do\ğruda G\öster'}</button>
       )}
     </div>
   </div>

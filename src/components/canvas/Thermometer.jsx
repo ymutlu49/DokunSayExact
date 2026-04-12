@@ -13,10 +13,10 @@ const Thermometer = ({ temp, changeTemp, setTemp, panelPos, startPanelDrag, rese
       padding: '2px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none',
     }}>
       <div style={{ width: 24, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.12)' }} />
-      <span style={{ fontSize: 7, fontWeight: 700, color: 'rgba(0,0,0,.15)' }}>s\u00fcr\u00fckle</span>
+      <span style={{ fontSize: 7, fontWeight: 700, color: 'rgba(0,0,0,.15)' }}>s\ür\ükle</span>
       <div style={{ width: 24, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.12)' }} />
       {panelPos && (
-        <button onClick={(e) => { e.stopPropagation(); resetPosition('tm'); }} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 8, color: '#bbb' }}>{'\u21a9'}</button>
+        <button onClick={(e) => { e.stopPropagation(); resetPosition('tm'); }} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 8, color: '#bbb' }}>{'\↩'}</button>
       )}
     </div>
     <div style={{
@@ -37,15 +37,15 @@ const Thermometer = ({ temp, changeTemp, setTemp, panelPos, startPanelDrag, rese
           <div style={{
             fontSize: 22, fontWeight: 900, textAlign: 'center', marginBottom: 4,
             color: temp > 0 ? THEME.negB : temp < 0 ? THEME.blue : THEME.accent,
-          }}>{(temp > 0 ? '+' : '') + temp + '\u00b0C'}</div>
+          }}>{(temp > 0 ? '+' : '') + temp + '\°C'}</div>
           <div style={{ display: 'flex', gap: 3, marginBottom: 3 }}>
-            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\uD83D\uDD25'}</button>
-            <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\u2744\uFE0F'}</button>
+            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\�\�'}</button>
+            <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\❄\️'}</button>
           </div>
           <button onClick={() => setTemp(0)} style={{
             width: '100%', padding: '3px 0', borderRadius: 4, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#999', fontFamily: 'inherit',
-          }}>{'\u21ba 0\u00b0C'}</button>
+          }}>{'\↺ 0\°C'}</button>
         </div>
       </div>
     </div>

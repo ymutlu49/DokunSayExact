@@ -11,7 +11,7 @@ const BottomBar = ({
     display: 'flex', alignItems: 'center', padding: '0 20px', gap: 10,
   }}>
     {/* Arka plan deseni */}
-    {[['D\u00fcz', 'plain'], ['Kareli', 'grid'], ['Noktal\u0131', 'dot']].map(([label, value]) => (
+    {[['D\üz', 'plain'], ['Kareli', 'grid'], ['Noktal\ı', 'dot']].map(([label, value]) => (
       <button
         key={value}
         onClick={() => setBgType(value)}
@@ -63,7 +63,7 @@ const BottomBar = ({
             <span
               onClick={(e) => { e.stopPropagation(); deletePage(pg.id); }}
               style={{ marginLeft: 4, fontSize: 8, color: '#ccc', cursor: 'pointer' }}
-            >\u00d7</span>
+            >\×</span>
           )}
         </button>
       ))}
@@ -80,11 +80,11 @@ const BottomBar = ({
 
     <div style={{ flex: 1 }} />
 
-    {/* Alt bar butonlar\u0131 */}
+    {/* Alt bar butonlar\ı */}
     {[
       { icon: '?', onClick: () => setShowHelp(true) },
-      { icon: '\u2139', onClick: () => setShowAbout(true) },
-      { icon: '\uD83D\uDC68\u200D\uD83C\uDFEB', onClick: () => setShowTeacher(true) },
+      { icon: '\ℹ', onClick: () => setShowAbout(true) },
+      { icon: '\�\�\‍\�\�', onClick: () => setShowTeacher(true) },
     ].map(({ icon, onClick }, i) => (
       <button
         key={i}

@@ -13,7 +13,7 @@ const MaterialsTab = ({
     {/* Pozitif Pullar */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.posB, marginBottom: 5 }}>
-        {'\u2295 Pozitif Pullar'}
+        {'\⊕ Pozitif Pullar'}
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
         {[1, 2, 3].map((n) => (
@@ -37,7 +37,7 @@ const MaterialsTab = ({
     {/* Negatif Pullar */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.negB, marginBottom: 5 }}>
-        {'\u2296 Negatif Pullar'}
+        {'\⊖ Negatif Pullar'}
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
         {[1, 2, 3].map((n) => (
@@ -58,40 +58,40 @@ const MaterialsTab = ({
       </div>
     </div>
 
-    {/* S\u0131f\u0131r \u00c7ifti */}
+    {/* S\ıf\ır \Çifti */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'\uD83D\uDFE3 S\u0131f\u0131r \u00c7ifti'}</div>
-        <span style={{ fontSize: 8, color: '#aaa' }}>{'(+1)+(\u22121)=0'}</span>
+        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'\�\� S\ıf\ır \Çifti'}</div>
+        <span style={{ fontSize: 8, color: '#aaa' }}>{'(+1)+(\−1)=0'}</span>
       </div>
       <button onClick={addZeroPair} style={{
         width: '100%', marginTop: 4, padding: '5px 0', borderRadius: 6,
         border: '1.5px solid rgba(139,92,246,.2)', background: 'rgba(139,92,246,.04)',
         cursor: 'pointer', fontSize: 10, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit',
-      }}>{'\u2295\u2296 Ekle'}</button>
+      }}>{'\⊕\⊖ Ekle'}</button>
     </div>
 
-    {/* Ara\u00e7lar */}
+    {/* Ara\çlar */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accentD, marginBottom: 4 }}>
-        {'\uD83E\uDDEE Ara\u00e7lar'}
+        {'\�\� Ara\çlar'}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-        {/* \u0130\u015flem Tepsisi */}
+        {/* \İ\şlem Tepsisi */}
         {showTray ? (
           <button onClick={() => { setShowTray(false); resetTray(); }} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(245,158,11,.3)',
             background: THEME.accentL, cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: THEME.accentD, fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\u2715 Tepsiyi Kapat'}</button>
+          }}>{'\✕ Tepsiyi Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'tray', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.accentD, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\uD83E\uDDEE \u0130\u015flem Tepsisi'}
-            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\u22ee\u22ee'}</span>
+            {'\�\� \İ\şlem Tepsisi'}
+            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
         {/* Fabrika */}
@@ -100,15 +100,15 @@ const MaterialsTab = ({
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(124,58,237,.3)',
             background: 'rgba(124,58,237,.06)', cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: '#7c3aed', fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\u2715 Fabrikay\u0131 Kapat'}</button>
+          }}>{'\✕ Fabrikay\ı Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'fab', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(0,0,0,.06)',
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: '#7c3aed', touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\uD83C\uDFED Tam-Say Fabrikas\u0131'}
-            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\u22ee\u22ee'}</span>
+            {'\�\� Tam-Say Fabrikas\ı'}
+            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
         {/* Termometre */}
@@ -117,61 +117,61 @@ const MaterialsTab = ({
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(239,68,68,.3)',
             background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: THEME.negB, fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\u2715 Termometreyi Kapat'}</button>
+          }}>{'\✕ Termometreyi Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'tm', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(0,0,0,.06)',
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.negB, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\uD83C\uDF21\uFE0F Termometre'}
-            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\u22ee\u22ee'}</span>
+            {'\�\�\️ Termometre'}
+            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
-        {/* Say\u0131 Do\u011frusu */}
+        {/* Say\ı Do\ğrusu */}
         {showNumberLine ? (
           <button onClick={() => { setShowNumberLine(false); resetNlPosition(); }} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(59,130,246,.3)',
             background: 'rgba(59,130,246,.06)', cursor: 'pointer', fontSize: 10, fontWeight: 700,
             color: THEME.blue, fontFamily: 'inherit', textAlign: 'left',
-          }}>{'\u2715 Say\u0131 Do\u011frusunu Kapat'}</button>
+          }}>{'\✕ Say\ı Do\ğrusunu Kapat'}</button>
         ) : (
           <div onPointerDown={(e) => startSidebarDrag('tool', 'nl', e)} style={{
             padding: '5px 8px', borderRadius: 6, border: '1px solid rgba(0,0,0,.06)',
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.blue, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\uD83D\uDCCF Say\u0131 Do\u011frusu'}
-            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\u22ee\u22ee'}</span>
+            {'\�\� Say\ı Do\ğrusu'}
+            <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
       </div>
     </div>
 
-    {/* Say\u0131 do\u011frusu kontrolleri */}
+    {/* Say\ı do\ğrusu kontrolleri */}
     {showNumberLine && (
       <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(59,130,246,.1)' }}>
         <div style={{ display: 'flex', gap: 2, marginBottom: 3 }}>
-          <button onClick={() => walkStep('left')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\u25c0 Sola'}</button>
-          <button onClick={() => { resetNumberLine(); }} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(139,92,246,.2)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: '#6d28d9', fontFamily: 'inherit' }}>{'\u2299'}</button>
-          <button onClick={() => walkStep('right')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'Sa\u011fa \u25b6'}</button>
+          <button onClick={() => walkStep('left')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\◀ Sola'}</button>
+          <button onClick={() => { resetNumberLine(); }} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(139,92,246,.2)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: '#6d28d9', fontFamily: 'inherit' }}>{'\⊙'}</button>
+          <button onClick={() => walkStep('right')} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'Sa\ğa \▶'}</button>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-          <button onClick={() => animateNumberLine(0, 4)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit' }}>{'0\u2192+4'}</button>
-          <button onClick={() => animateNumberLine(0, -3)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(239,68,68,.15)', background: 'rgba(239,68,68,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.negB, fontFamily: 'inherit' }}>{'0\u2192\u22123'}</button>
-          <button onClick={() => animateNumberLine(3, -7)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit' }}>{'(+3)+(\u22127)'}</button>
-          <button onClick={() => resetNumberLine()} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid ' + THEME.sideB, background: '#fff', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#999', fontFamily: 'inherit' }}>{'\uD83D\uDDD1 Temizle'}</button>
+          <button onClick={() => animateNumberLine(0, 4)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit' }}>{'0\→+4'}</button>
+          <button onClick={() => animateNumberLine(0, -3)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(239,68,68,.15)', background: 'rgba(239,68,68,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.negB, fontFamily: 'inherit' }}>{'0\→\−3'}</button>
+          <button onClick={() => animateNumberLine(3, -7)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit' }}>{'(+3)+(\−7)'}</button>
+          <button onClick={() => resetNumberLine()} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid ' + THEME.sideB, background: '#fff', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#999', fontFamily: 'inherit' }}>{'\�\� Temizle'}</button>
         </div>
       </div>
     )}
 
-    {/* \u0130\u015faret & Say\u0131 Kartlar\u0131 */}
+    {/* \İ\şaret & Say\ı Kartlar\ı */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accent, marginBottom: 4 }}>
-        {'\u0130\u015faret & Say\u0131 Kartlar\u0131'}
+        {'\İ\şaret & Say\ı Kartlar\ı'}
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2, marginBottom: 4 }}>
-        {['+', '\u2212', '\u00d7', '\u00f7', '=', '<', '>'].map((op) => (
+        {['+', '\−', '\×', '\÷', '=', '<', '>'].map((op) => (
           <div key={op} style={{
             width: 26, height: 26, borderRadius: 6, background: '#fff',
             border: '1.5px solid ' + THEME.sideB, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -195,18 +195,18 @@ const MaterialsTab = ({
       </div>
     </div>
 
-    {/* \u00d6rnek & Temizle */}
+    {/* \Örnek & Temizle */}
     <div style={{ display: 'flex', gap: 4 }}>
       <button onClick={() => { addChips('pos', 3); addChips('neg', 2); }} style={{
         flex: 1, padding: '7px 0', borderRadius: 8, border: 'none',
         background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',
         color: '#fff', fontSize: 10, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit',
-      }}>{'\u26a1 \u00d6rnek'}</button>
+      }}>{'\⚡ \Örnek'}</button>
       <button onClick={clearAll} style={{
         flex: 1, padding: '7px 0', borderRadius: 8,
         border: '1.5px solid ' + THEME.sideB, background: '#fff',
         color: '#888', fontSize: 10, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit',
-      }}>{'\uD83D\uDDD1 Temizle'}</button>
+      }}>{'\�\� Temizle'}</button>
     </div>
   </div>
 );

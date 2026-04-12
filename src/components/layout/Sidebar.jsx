@@ -6,10 +6,10 @@ import FeaturesTab from '../sidebar/FeaturesTab';
 import { THEME } from '../../constants/theme';
 
 const TAB_ICONS = [
-  ['\uD83D\uDCE6', 'mat'],
-  ['\uD83D\uDCCB', 'act'],
-  ['\uD83C\uDFAE', 'game'],
-  ['\u2699\uFE0F', 'feat'],
+  ['\�\�', 'mat'],
+  ['\�\�', 'act'],
+  ['\�\�', 'game'],
+  ['\⚙\️', 'feat'],
 ];
 
 const Sidebar = ({
@@ -25,20 +25,20 @@ const Sidebar = ({
   }}>
     {!collapsed ? (
       <div style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden' }}>
-        {/* \u00dcst bar */}
+        {/* \Üst bar */}
         <div style={{ padding: '10px 14px 6px', display: 'flex', alignItems: 'center', gap: 8, borderBottom: '1px solid rgba(0,0,0,.05)' }}>
           <Logo size={28} />
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 14, fontWeight: 900, color: THEME.text }}>DokunSay Tam Say\u0131lar</div>
+            <div style={{ fontSize: 14, fontWeight: 900, color: THEME.text }}>DokunSay Tam Say\ılar</div>
           </div>
           <button onClick={() => setCollapsed(true)} style={{
             background: 'rgba(0,0,0,.04)', border: 'none', cursor: 'pointer',
             fontSize: 14, color: '#bbb', width: 28, height: 28, borderRadius: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>{'\u25c0'}</button>
+          }}>{'\◀'}</button>
         </div>
 
-        {/* Tab butonlar\u0131 */}
+        {/* Tab butonlar\ı */}
         <div style={{ display: 'flex', padding: '6px 10px', gap: 3, background: 'rgba(0,0,0,.02)' }}>
           {TAB_ICONS.map(([icon, tab]) => (
             <button key={tab} onClick={() => setActiveTab(tab)} style={{
@@ -52,7 +52,7 @@ const Sidebar = ({
           ))}
         </div>
 
-        {/* Tab i\u00e7eri\u011fi */}
+        {/* Tab i\çeri\ği */}
         {activeTab === 'mat' && <MaterialsTab {...materialsProps} />}
         {activeTab === 'act' && <ActivitiesTab {...activitiesProps} />}
         {activeTab === 'game' && <GamesTab {...gamesProps} />}

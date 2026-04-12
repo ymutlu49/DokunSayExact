@@ -25,12 +25,12 @@ const TrayChips = ({ chips, onAdd, onRemove, label }) => {
           flex: 1, padding: '4px 0', borderRadius: 6, border: '1.5px solid rgba(34,197,94,.4)',
           background: 'rgba(34,197,94,.15)', cursor: 'pointer', fontSize: 9, fontWeight: 800,
           color: '#4ade80', fontFamily: 'inherit',
-        }}>{'\u2295'}</button>
+        }}>{'\⊕'}</button>
         <button onClick={() => onAdd('neg')} style={{
           flex: 1, padding: '4px 0', borderRadius: 6, border: '1.5px solid rgba(239,68,68,.4)',
           background: 'rgba(239,68,68,.15)', cursor: 'pointer', fontSize: 9, fontWeight: 800,
           color: '#f87171', fontFamily: 'inherit',
-        }}>{'\u2296'}</button>
+        }}>{'\⊖'}</button>
       </div>
       <div style={{ textAlign: 'center', marginTop: 4, fontSize: 16, fontWeight: 900, color: '#fff' }}>
         {val >= 0 ? '+' + val : val}
@@ -49,13 +49,13 @@ const OperationTray = ({
   } : {
     position: 'absolute', top: 54, left: '50%', transform: 'translateX(-50%)', zIndex: 6, animation: 'slideDown .3s',
   }}>
-    {/* S\u00fcr\u00fckleme tutamac\u0131 */}
+    {/* S\ür\ükleme tutamac\ı */}
     <div onPointerDown={(e) => startPanelDrag('tray', e)} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
       padding: '2px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none', marginBottom: 2,
     }}>
       <div style={{ width: 30, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.1)' }} />
-      <span style={{ fontSize: 7, color: 'rgba(0,0,0,.15)' }}>s\u00fcr\u00fckle</span>
+      <span style={{ fontSize: 7, color: 'rgba(0,0,0,.15)' }}>s\ür\ükle</span>
       <div style={{ width: 30, height: 4, borderRadius: 2, background: 'rgba(0,0,0,.1)' }} />
     </div>
 
@@ -63,7 +63,7 @@ const OperationTray = ({
       <TrayChips chips={trayA} onAdd={(t) => setTrayA((p) => [...p, t])} onRemove={(i) => setTrayA((p) => p.filter((_, j) => j !== i))} label="Sol Tepsi" />
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-        {['+', '\u2212', '\u00d7', '\u00f7'].map((op) => (
+        {['+', '\−', '\×', '\÷'].map((op) => (
           <button key={op} onClick={() => setOperator(op)} style={{
             width: 36, height: 36, borderRadius: 10,
             border: operator === op ? '2.5px solid ' + THEME.accent : '2px solid #ddd',
@@ -74,9 +74,9 @@ const OperationTray = ({
         ))}
       </div>
 
-      <TrayChips chips={trayB} onAdd={(t) => setTrayB((p) => [...p, t])} onRemove={(i) => setTrayB((p) => p.filter((_, j) => j !== i))} label="Sa\u011f Tepsi" />
+      <TrayChips chips={trayB} onAdd={(t) => setTrayB((p) => [...p, t])} onRemove={(i) => setTrayB((p) => p.filter((_, j) => j !== i))} label="Sa\ğ Tepsi" />
 
-      <div style={{ fontSize: 28, fontWeight: 900, color: '#999' }}>{'\u2192'}</div>
+      <div style={{ fontSize: 28, fontWeight: 900, color: '#999' }}>{'\→'}</div>
 
       <div style={{
         background: 'linear-gradient(180deg,#3d8b8b,#2d6b6b)',
@@ -93,7 +93,7 @@ const OperationTray = ({
               border: '1px solid rgba(255,255,255,.3)', background: 'rgba(255,255,255,.1)',
               cursor: 'pointer', fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,.7)',
               fontFamily: 'inherit',
-            }}>{'\u21ba S\u0131f\u0131rla'}</button>
+            }}>{'\↺ S\ıf\ırla'}</button>
           </div>
         ) : (
           <button onClick={calculate} style={{

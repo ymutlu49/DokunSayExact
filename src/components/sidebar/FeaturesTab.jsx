@@ -7,15 +7,15 @@ const FeaturesTab = ({
   temp, changeTemp, setTemp,
 }) => (
   <div style={{ flex: 1, overflowY: 'auto', padding: '10px 12px' }}>
-    {/* G\u00f6r\u00fcn\u00fcm */}
+    {/* G\ör\ün\üm */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: '#555', marginBottom: 8 }}>G\u00f6r\u00fcn\u00fcm</div>
-      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="\uD83C\uDFD7\uFE0F" label="Dikey say\u0131 do\u011frusu" sub="Asans\u00f6r / Deniz seviyesi" />
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: '#555', marginBottom: 8 }}>G\ör\ün\üm</div>
+      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="\�\�\️" label="Dikey say\ı do\ğrusu" sub="Asans\ör / Deniz seviyesi" />
     </div>
 
-    {/* Asans\u00f6r Sim\u00fclasyonu */}
+    {/* Asans\ör Sim\ülasyonu */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'\uD83C\uDFE2 Asans\u00f6r Sim\u00fclasyonu'}</div>
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'\�\� Asans\ör Sim\ülasyonu'}</div>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <div style={{ width: 60, background: 'linear-gradient(180deg,#e0e7ff,#dbeafe)', borderRadius: 10, padding: '4px', position: 'relative', height: 180 }}>
           {Array.from({ length: 11 }, (_, i) => {
@@ -28,7 +28,7 @@ const FeaturesTab = ({
                 color: v > 0 ? THEME.posB : v < 0 ? THEME.negB : THEME.accent,
                 background: v === elevator ? 'rgba(245,158,11,.2)' : 'transparent',
                 borderRadius: 4, transition: 'background .3s',
-              }}>{v === 0 ? 'Giri\u015f' : v > 0 ? '+' + v : v}</div>
+              }}>{v === 0 ? 'Giri\ş' : v > 0 ? '+' + v : v}</div>
             );
           })}
           <div style={{
@@ -41,10 +41,10 @@ const FeaturesTab = ({
           <div style={{
             fontSize: 20, fontWeight: 900, textAlign: 'center', marginBottom: 8,
             color: elevator > 0 ? THEME.posB : elevator < 0 ? THEME.negB : THEME.accent,
-          }}>{elevator === 0 ? 'Giri\u015f Kat\u0131' : (elevator > 0 ? '+' : '') + elevator + '. Kat'}</div>
+          }}>{elevator === 0 ? 'Giri\ş Kat\ı' : (elevator > 0 ? '+' : '') + elevator + '. Kat'}</div>
           <div style={{ display: 'flex', gap: 4, marginBottom: 4 }}>
-            <button onClick={() => moveElevator(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'\u25b2 Yukar\u0131'}</button>
-            <button onClick={() => moveElevator(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\u25bc A\u015fa\u011f\u0131'}</button>
+            <button onClick={() => moveElevator(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(34,197,94,.2)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.posB, fontFamily: 'inherit' }}>{'\▲ Yukar\ı'}</button>
+            <button onClick={() => moveElevator(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\▼ A\şa\ğ\ı'}</button>
           </div>
           <div style={{ display: 'flex', gap: 3 }}>
             {[3, -5, 2, -3].map((d) => (
@@ -59,14 +59,14 @@ const FeaturesTab = ({
             width: '100%', padding: '4px 0', borderRadius: 5, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'pointer', fontSize: 8, fontWeight: 700, color: '#999',
             fontFamily: 'inherit', marginTop: 3,
-          }}>{'\u21ba Giri\u015fe d\u00f6n'}</button>
+          }}>{'\↺ Giri\şe d\ön'}</button>
         </div>
       </div>
     </div>
 
     {/* Termometre */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.red, marginBottom: 8 }}>{'\uD83C\uDF21\uFE0F Termometre'}</div>
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.red, marginBottom: 8 }}>{'\�\�\️ Termometre'}</div>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <div style={{ width: 30, height: 160, background: 'linear-gradient(180deg,#fee2e2,#dbeafe)', borderRadius: 15, position: 'relative', border: '2px solid #ddd' }}>
           <div style={{
@@ -79,16 +79,16 @@ const FeaturesTab = ({
             position: 'absolute', bottom: Math.max(0, (temp + 10) / 20 * 160) - 8,
             left: '50%', transform: 'translateX(-50%)',
             fontSize: 10, fontWeight: 900, color: '#fff', textShadow: '0 1px 3px rgba(0,0,0,.4)',
-          }}>{temp + '\u00b0'}</div>
+          }}>{temp + '\°'}</div>
         </div>
         <div style={{ flex: 1 }}>
           <div style={{
             fontSize: 28, fontWeight: 900, textAlign: 'center', marginBottom: 4,
             color: temp > 0 ? THEME.negB : temp < 0 ? THEME.blue : THEME.accent,
-          }}>{(temp > 0 ? '+' : '') + temp + '\u00b0C'}</div>
+          }}>{(temp > 0 ? '+' : '') + temp + '\°C'}</div>
           <div style={{ display: 'flex', gap: 4, marginBottom: 4 }}>
-            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\uD83D\uDD25 +1\u00b0'}</button>
-            <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\u2744\uFE0F \u22121\u00b0'}</button>
+            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\�\� +1\°'}</button>
+            <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\❄\️ \−1\°'}</button>
           </div>
           <div style={{ display: 'flex', gap: 3 }}>
             {[5, -5, 3, -8].map((d) => (
@@ -96,14 +96,14 @@ const FeaturesTab = ({
                 flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid ' + THEME.sideB,
                 background: '#fff', cursor: 'pointer', fontSize: 8, fontWeight: 700,
                 color: d > 0 ? THEME.negB : THEME.blue, fontFamily: 'inherit',
-              }}>{(d > 0 ? '+' : '') + d + '\u00b0'}</button>
+              }}>{(d > 0 ? '+' : '') + d + '\°'}</button>
             ))}
           </div>
           <button onClick={() => setTemp(0)} style={{
             width: '100%', padding: '4px 0', borderRadius: 5, border: '1px solid ' + THEME.sideB,
             background: '#fff', cursor: 'pointer', fontSize: 8, fontWeight: 700, color: '#999',
             fontFamily: 'inherit', marginTop: 3,
-          }}>{'\u21ba S\u0131f\u0131rla'}</button>
+          }}>{'\↺ S\ıf\ırla'}</button>
         </div>
       </div>
     </div>
