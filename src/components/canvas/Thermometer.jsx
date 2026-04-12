@@ -39,7 +39,7 @@ const Thermometer = ({ temp, changeTemp, setTemp, panelPos, startPanelDrag, rese
             color: temp > 0 ? THEME.negB : temp < 0 ? THEME.blue : THEME.accent,
           }}>{(temp > 0 ? '+' : '') + temp + '\°C'}</div>
           <div style={{ display: 'flex', gap: 3, marginBottom: 3 }}>
-            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\�\�'}</button>
+            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'🔥'}</button>
             <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '4px 0', borderRadius: 5, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 9, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\❄\️'}</button>
           </div>
           <button onClick={() => setTemp(0)} style={{

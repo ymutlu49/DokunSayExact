@@ -1,10 +1,10 @@
 import { THEME } from '../../constants/theme';
 
 const TOOLS = [
-  ['select', '\�\�\️', 'Se\ç'],
+  ['select', '🖱️', 'Se\ç'],
   ['pen', '\✏\️', 'Kalem'],
-  ['highlighter', '\�\�\️', 'Vurgula'],
-  ['eraser', '\�\�', 'Silgi'],
+  ['highlighter', '🖍️', 'Vurgula'],
+  ['eraser', '🧹', 'Silgi'],
 ];
 
 const COLORS = ['#1a1a1a', '#ef4444', '#3b82f6', '#22c55e', '#f59e0b', '#8b5cf6', '#ec4899', '#fff'];
@@ -84,7 +84,7 @@ const Toolbar = ({
     <div style={{ width: 1, height: 22, background: 'rgba(0,0,0,.08)', margin: '0 2px' }} />
     <button onClick={undo} title="Geri al" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: strokes.length ? '#666' : '#ddd' }}>{'\↩'}</button>
     <button onClick={redo} title="Yinele" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 14, color: undone.length ? '#666' : '#ddd' }}>{'\↪'}</button>
-    <button onClick={clearDrawings} title="\Çizimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'\�\�'}</button>
+    <button onClick={clearDrawings} title="\Çizimleri sil" style={{ width: 30, height: 30, borderRadius: 7, border: 'none', background: 'transparent', cursor: 'pointer', fontSize: 13, color: '#bbb' }}>{'🗑'}</button>
   </div>
 );
 

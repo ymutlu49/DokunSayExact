@@ -21,11 +21,11 @@ const AboutModal = ({ onClose }) => (
       </div>
       <div style={{ margin: '0 24px 20px', background: '#fff', borderRadius: 16, padding: '16px 20px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 12 }}>
-          <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{'\�\�'}</div>
+          <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{'🎓'}</div>
           <div style={{ fontSize: 15, fontWeight: 900, color: THEME.text }}>Prof. Dr. Y\ılmaz Mutlu</div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#93c5fd,#3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{'\�\�\‍\�\�'}</div>
+          <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#93c5fd,#3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20 }}>{'👩‍🏫'}</div>
           <div>
             <div style={{ fontSize: 15, fontWeight: 900, color: THEME.text }}>Rumeysa Durgun</div>
             <div style={{ fontSize: 10, color: '#888' }}>Matematik \Ö\ğretmeni</div>

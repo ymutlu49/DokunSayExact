@@ -10,12 +10,12 @@ const FeaturesTab = ({
     {/* G\ör\ün\üm */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: '#555', marginBottom: 8 }}>G\ör\ün\üm</div>
-      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="\�\�\️" label="Dikey say\ı do\ğrusu" sub="Asans\ör / Deniz seviyesi" />
+      <Switch on={showVertical} onTap={() => setShowVertical(!showVertical)} icon="🏗️" label="Dikey say\ı do\ğrusu" sub="Asans\ör / Deniz seviyesi" />
     </div>
 
     {/* Asans\ör Sim\ülasyonu */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'\�\� Asans\ör Sim\ülasyonu'}</div>
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.blue, marginBottom: 8 }}>{'🏢 Asans\ör Sim\ülasyonu'}</div>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <div style={{ width: 60, background: 'linear-gradient(180deg,#e0e7ff,#dbeafe)', borderRadius: 10, padding: '4px', position: 'relative', height: 180 }}>
           {Array.from({ length: 11 }, (_, i) => {
@@ -66,7 +66,7 @@ const FeaturesTab = ({
 
     {/* Termometre */}
     <div style={{ background: '#fff', borderRadius: 14, padding: '12px', marginBottom: 8, border: '1px solid rgba(0,0,0,.05)' }}>
-      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.red, marginBottom: 8 }}>{'\�\�\️ Termometre'}</div>
+      <div style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: THEME.red, marginBottom: 8 }}>{'🌡️ Termometre'}</div>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <div style={{ width: 30, height: 160, background: 'linear-gradient(180deg,#fee2e2,#dbeafe)', borderRadius: 15, position: 'relative', border: '2px solid #ddd' }}>
           <div style={{
@@ -87,7 +87,7 @@ const FeaturesTab = ({
             color: temp > 0 ? THEME.negB : temp < 0 ? THEME.blue : THEME.accent,
           }}>{(temp > 0 ? '+' : '') + temp + '\°C'}</div>
           <div style={{ display: 'flex', gap: 4, marginBottom: 4 }}>
-            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'\�\� +1\°'}</button>
+            <button onClick={() => changeTemp(1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(239,68,68,.2)', background: 'rgba(239,68,68,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.negB, fontFamily: 'inherit' }}>{'🔥 +1\°'}</button>
             <button onClick={() => changeTemp(-1)} style={{ flex: 1, padding: '6px 0', borderRadius: 6, border: '1px solid rgba(59,130,246,.2)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 10, fontWeight: 800, color: THEME.blue, fontFamily: 'inherit' }}>{'\❄\️ \−1\°'}</button>
           </div>
           <div style={{ display: 'flex', gap: 3 }}>

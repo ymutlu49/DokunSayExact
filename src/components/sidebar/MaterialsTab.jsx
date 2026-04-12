@@ -61,7 +61,7 @@ const MaterialsTab = ({
     {/* S\ıf\ır \Çifti */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'\�\� S\ıf\ır \Çifti'}</div>
+        <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: '#6d28d9' }}>{'🟣 S\ıf\ır \Çifti'}</div>
         <span style={{ fontSize: 8, color: '#aaa' }}>{'(+1)+(\−1)=0'}</span>
       </div>
       <button onClick={addZeroPair} style={{
@@ -74,7 +74,7 @@ const MaterialsTab = ({
     {/* Ara\çlar */}
     <div style={{ background: '#fff', borderRadius: 12, padding: '8px 10px', marginBottom: 6, border: '1px solid rgba(0,0,0,.05)' }}>
       <div style={{ fontSize: 9, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1, color: THEME.accentD, marginBottom: 4 }}>
-        {'\�\� Ara\çlar'}
+        {'⚙️ Ara\çlar'}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         {/* \İ\şlem Tepsisi */}
@@ -90,7 +90,7 @@ const MaterialsTab = ({
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.accentD, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\�\� \İ\şlem Tepsisi'}
+            {'🧮 \İ\şlem Tepsisi'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -107,7 +107,7 @@ const MaterialsTab = ({
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: '#7c3aed', touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\�\� Tam-Say Fabrikas\ı'}
+            {'🏭 Tam-Say Fabrikas\ı'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -124,7 +124,7 @@ const MaterialsTab = ({
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.negB, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\�\�\️ Termometre'}
+            {'🌡️ Termometre'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -141,7 +141,7 @@ const MaterialsTab = ({
             background: '#fff', cursor: 'grab', fontSize: 10, fontWeight: 700,
             color: THEME.blue, touchAction: 'none', display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            {'\�\� Say\ı Do\ğrusu'}
+            {'📏 Say\ı Do\ğrusu'}
             <span style={{ marginLeft: 'auto', fontSize: 8, color: '#ccc' }}>{'\⋮\⋮'}</span>
           </div>
         )}
@@ -160,7 +160,7 @@ const MaterialsTab = ({
           <button onClick={() => animateNumberLine(0, 4)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit' }}>{'0\→+4'}</button>
           <button onClick={() => animateNumberLine(0, -3)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(239,68,68,.15)', background: 'rgba(239,68,68,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: THEME.negB, fontFamily: 'inherit' }}>{'0\→\−3'}</button>
           <button onClick={() => animateNumberLine(3, -7)} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.03)', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit' }}>{'(+3)+(\−7)'}</button>
-          <button onClick={() => resetNumberLine()} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid ' + THEME.sideB, background: '#fff', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#999', fontFamily: 'inherit' }}>{'\�\� Temizle'}</button>
+          <button onClick={() => resetNumberLine()} style={{ padding: '3px 0', borderRadius: 4, border: '1px solid ' + THEME.sideB, background: '#fff', cursor: 'pointer', fontSize: 7, fontWeight: 700, color: '#999', fontFamily: 'inherit' }}>{'🗑 Temizle'}</button>
         </div>
       </div>
     )}
@@ -206,7 +206,7 @@ const MaterialsTab = ({
         flex: 1, padding: '7px 0', borderRadius: 8,
         border: '1.5px solid ' + THEME.sideB, background: '#fff',
         color: '#888', fontSize: 10, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit',
-      }}>{'\�\� Temizle'}</button>
+      }}>{'🗑 Temizle'}</button>
     </div>
   </div>
 );

@@ -323,8 +323,8 @@ const App = () => {
             {/* Game indicator */}
             {game && (
               <div style={{ position: 'absolute', top: 56, left: 16, zIndex: 4, padding: '6px 14px', borderRadius: 10, background: 'rgba(245,158,11,.1)', border: '1.5px solid rgba(245,158,11,.2)' }}>
-                <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'\�\� ' + game.score}</span>
-                {game.feedback === 'correct' && <span style={{ marginLeft: 8, fontSize: 18, animation: 'popIn .3s' }}>{'\�\�'}</span>}
+                <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'\ud83c\udfc6 ' + game.score}</span>
+                {game.feedback === 'correct' && <span style={{ marginLeft: 8, fontSize: 18, animation: 'popIn .3s' }}>{'🎉'}</span>}
               </div>
             )}
 
@@ -332,7 +332,7 @@ const App = () => {
             {sidebarDrag && dropHighlight && (
               <div style={{ position: 'absolute', inset: 0, zIndex: 0, border: '3px dashed rgba(245,158,11,.4)', borderRadius: 4, pointerEvents: 'none' }}>
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', background: THEME.accentL, padding: '8px 20px', borderRadius: 12 }}>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'\�\� Buraya b\ırak'}</span>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: 'rgba(245,158,11,.6)' }}>{'📥 Buraya b\ırak'}</span>
                 </div>
               </div>
             )}
@@ -367,7 +367,7 @@ const App = () => {
             borderTop: overTrash ? '2px solid ' + THEME.red : '1px solid rgba(0,0,0,.05)',
             zIndex: 20, transition: 'background .2s',
           }}>
-            <span style={{ fontSize: overTrash ? 20 : 14, transition: 'font-size .2s' }}>{overTrash ? '\�\�\️' : '\�\�'}</span>
+            <span style={{ fontSize: overTrash ? 20 : 14, transition: 'font-size .2s' }}>{overTrash ? '🗑️' : '🗑'}</span>
             <span style={{ fontSize: 10, fontWeight: 700, color: overTrash ? THEME.red : itemDrag ? '#aaa' : '#ccc' }}>
               {overTrash ? 'B\ırak \→ Sil' : itemDrag ? 'Buraya s\ür\ükle \→ Sil' : 'Silme Alan\ı'}
             </span>
@@ -400,7 +400,7 @@ const App = () => {
           )}
           {sidebarDrag.t === 'tool' && (
             <div style={{ padding: '6px 14px', borderRadius: 10, background: '#fff', border: '2px solid ' + THEME.accent, boxShadow: '0 4px 16px rgba(0,0,0,.15)', fontSize: 12, fontWeight: 800, color: THEME.text }}>
-              {sidebarDrag.v === 'tray' ? '\�\� \İ\şlem Tepsisi' : sidebarDrag.v === 'fab' ? '\�\� Fabrika' : sidebarDrag.v === 'tm' ? '\�\�\️ Termometre' : '\�\� Say\ı Do\ğrusu'}
+              {sidebarDrag.v === 'tray' ? '🧮 \İ\şlem Tepsisi' : sidebarDrag.v === 'fab' ? '🏭 Fabrika' : sidebarDrag.v === 'tm' ? '🌡️ Termometre' : '📏 Say\ı Do\ğrusu'}
             </div>
           )}
         </div>

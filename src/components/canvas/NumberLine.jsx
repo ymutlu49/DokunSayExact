@@ -17,7 +17,7 @@ const NumberLine = ({ position, jumps, walkDirection, animateNumberLine, panelPo
       padding: '3px 0', cursor: 'grab', userSelect: 'none', touchAction: 'none',
     }}>
       <div style={{ width: 40, height: 5, borderRadius: 3, background: 'rgba(0,0,0,.12)' }} />
-      <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(0,0,0,.2)' }}>{'\�\� s\ür\ükle'}</span>
+      <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(0,0,0,.2)' }}>{'↕ s\ür\ükle'}</span>
       <div style={{ width: 40, height: 5, borderRadius: 3, background: 'rgba(0,0,0,.12)' }} />
       {panelPos && (
         <button onClick={(e) => { e.stopPropagation(); resetPosition('nl'); }} style={{

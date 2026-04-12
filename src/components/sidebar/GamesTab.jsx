@@ -70,19 +70,19 @@ const GamesTab = ({ game, setGame, posCount, negCount, netValue, animateNumberLi
       }}>
         {!game ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 4 }}>{'\�\� Oyunlar'}</div>
-            <button onClick={startQuiz} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(245,158,11,.15)', background: THEME.accentL, cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.accentD, fontFamily: 'inherit', textAlign: 'left' }}>{'\�\� \İ\şlem Quiz (15 Soru)'}</button>
+            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 4 }}>{'🎮 Oyunlar'}</div>
+            <button onClick={startQuiz} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(245,158,11,.15)', background: THEME.accentL, cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.accentD, fontFamily: 'inherit', textAlign: 'left' }}>{'🧮 \İ\şlem Quiz (15 Soru)'}</button>
             <button onClick={startCompare} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'\⚖\️ Kar\ş\ıla\şt\ır'}</button>
-            <button onClick={() => setGame({ mode: 'zero', score: 0, total: 0, feedback: null, target: Math.floor(Math.random() * 5) + 1 })} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit', textAlign: 'left' }}>{'\�\� S\ıf\ır \Çifti Av\ı'}</button>
-            <button onClick={startNumline} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit', textAlign: 'left' }}>{'\�\� Say\ı Do\ğrusunda Topla'}</button>
+            <button onClick={() => setGame({ mode: 'zero', score: 0, total: 0, feedback: null, target: Math.floor(Math.random() * 5) + 1 })} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(139,92,246,.15)', background: 'rgba(139,92,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: '#6d28d9', fontFamily: 'inherit', textAlign: 'left' }}>{'🟣 S\ıf\ır \Çifti Av\ı'}</button>
+            <button onClick={startNumline} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(34,197,94,.15)', background: 'rgba(34,197,94,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.posB, fontFamily: 'inherit', textAlign: 'left' }}>{'📏 Say\ı Do\ğrusunda Topla'}</button>
             <div style={{ height: 1, background: 'rgba(0,0,0,.06)', margin: '4px 0' }} />
-            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.blue, marginBottom: 4 }}>{'\�\� Ger\çek Hayat'}</div>
-            <button onClick={startScenario} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'\�\� Senaryo Sorular\ı'}</button>
+            <div style={{ fontSize: 10, fontWeight: 800, color: THEME.blue, marginBottom: 4 }}>{'🌍 Ger\çek Hayat'}</div>
+            <button onClick={startScenario} style={{ padding: '8px 12px', borderRadius: 8, border: '1.5px solid rgba(59,130,246,.15)', background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 11, fontWeight: 700, color: THEME.blue, fontFamily: 'inherit', textAlign: 'left' }}>{'🔍 Senaryo Sorular\ı'}</button>
           </div>
         ) : (
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-              <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'\�\� ' + game.score + '/' + game.total}</span>
+              <span style={{ fontSize: 14, fontWeight: 900, color: THEME.accentD }}>{'🏆 ' + game.score + '/' + game.total}</span>
               <button onClick={() => setGame(null)} style={{ padding: '3px 10px', borderRadius: 6, border: '1px solid #ddd', background: '#fff', cursor: 'pointer', fontSize: 9, fontWeight: 700, color: '#888', fontFamily: 'inherit' }}>{'\✕ Bitir'}</button>
             </div>
 

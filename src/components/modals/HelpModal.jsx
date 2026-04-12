@@ -3,12 +3,12 @@ import { THEME } from '../../constants/theme';
 const HELP_ITEMS = [
   '\• \⊕ Pozitif ve \⊖ Negatif pullar\ı kanvasa s\ür\ükle',
   '\• Bir \⊕ + bir \⊖ = s\ıf\ır \çifti (birbirini yok eder)',
-  '\• \�\� \İ\şlem Tepsisi \→ iki tarafta pul yerle\ştir, i\şlem se\ç, hesapla',
-  '\• \�\� Tam-Say Fabrikas\ı \→ \⊕ ve \⊖ butonlar\ıyla pul \üret',
-  '\• \�\� Say\ı do\ğrusunda y\ür\üyen insan \→ \◀ Sola / Sa\ğa \▶ butonlar\ıyla y\ür\üt',
-  '\• \�\� Asans\ör ve \�\�\️ Termometre \→ \⚙\️ sekmesinde',
-  '\• \�\� Oyunlar \→ Quiz, kar\ş\ıla\şt\ır, say\ı do\ğrusu, senaryo sorular\ı',
-  '\• \✏\️ Kalem ile \çizim yap, \�\� silgi ile sil',
+  '\• 🧮 \İ\şlem Tepsisi \→ iki tarafta pul yerle\ştir, i\şlem se\ç, hesapla',
+  '\• 🏭 Tam-Say Fabrikas\ı \→ \⊕ ve \⊖ butonlar\ıyla pul \üret',
+  '\• 📏 Say\ı do\ğrusunda y\ür\üyen insan \→ \◀ Sola / Sa\ğa \▶ butonlar\ıyla y\ür\üt',
+  '\• 🏢 Asans\ör ve 🌡️ Termometre \→ \⚙\️ sekmesinde',
+  '\• 🎮 Oyunlar \→ Quiz, kar\ş\ıla\şt\ır, say\ı do\ğrusu, senaryo sorular\ı',
+  '\• \✏\️ Kalem ile \çizim yap, 🧹 silgi ile sil',
 ];
 
 const HelpModal = ({ onClose }) => (

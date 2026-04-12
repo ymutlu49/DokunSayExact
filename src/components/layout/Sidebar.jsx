@@ -6,9 +6,9 @@ import FeaturesTab from '../sidebar/FeaturesTab';
 import { THEME } from '../../constants/theme';
 
 const TAB_ICONS = [
-  ['\�\�', 'mat'],
-  ['\�\�', 'act'],
-  ['\�\�', 'game'],
+  ['📦', 'mat'],
+  ['📋', 'act'],
+  ['🎮', 'game'],
   ['\⚙\️', 'feat'],
 ];
 

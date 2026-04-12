@@ -84,7 +84,7 @@ const BottomBar = ({
     {[
       { icon: '?', onClick: () => setShowHelp(true) },
       { icon: '\ℹ', onClick: () => setShowAbout(true) },
-      { icon: '\�\�\‍\�\�', onClick: () => setShowTeacher(true) },
+      { icon: '👨‍🏫', onClick: () => setShowTeacher(true) },
     ].map(({ icon, onClick }, i) => (
       <button
         key={i}

@@ -13,11 +13,11 @@ const TeacherPanel = ({
       background: '#fff', borderRadius: 24, padding: '28px 32px', maxWidth: 580,
       width: '92%', maxHeight: '90vh', overflowY: 'auto', animation: 'popIn .3s',
     }}>
-      <div style={{ fontSize: 22, fontWeight: 900, marginBottom: 16 }}>{'\�\�\‍\�\� \Ö\ğretmen Paneli'}</div>
+      <div style={{ fontSize: 22, fontWeight: 900, marginBottom: 16 }}>{'👨‍🏫 \Ö\ğretmen Paneli'}</div>
 
       {/* \Ö\ğrenci bilgileri */}
       <div style={{ background: THEME.accentL, borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(245,158,11,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\�\� \Ö\ğrenci'}</div>
+        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'👤 \Ö\ğrenci'}</div>
         <div style={{ display: 'flex', gap: 8 }}>
           <input value={studentName} onChange={(e) => setStudentName(e.target.value)} placeholder="Ad..." style={{
             flex: 2, padding: '7px 10px', borderRadius: 8, border: '1.5px solid #ddd',
@@ -60,7 +60,7 @@ const TeacherPanel = ({
 
       {/* Ders planlar\ı */}
       <div style={{ background: 'rgba(139,92,246,.04)', borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(139,92,246,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: '#6d28d9', marginBottom: 8 }}>{'\�\� Ders Planlar\ı'}</div>
+        <div style={{ fontSize: 10, fontWeight: 800, color: '#6d28d9', marginBottom: 8 }}>{'📚 Ders Planlar\ı'}</div>
         {LESSONS.map((ls, li) => {
           const indices = ls.activityIndices || [];
           const doneCount = indices.filter((ai) => completed[ACTIVITIES[ai]?.name]).length;
@@ -80,7 +80,7 @@ const TeacherPanel = ({
 
       {/* Notlar */}
       <div style={{ background: THEME.accentL, borderRadius: 14, padding: '14px', marginBottom: 14, border: '1.5px solid rgba(245,158,11,.12)' }}>
-        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'\�\� Notlar'}</div>
+        <div style={{ fontSize: 10, fontWeight: 800, color: THEME.accentD, marginBottom: 8 }}>{'📝 Notlar'}</div>
         <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="G\özlemler..." rows={3} style={{
           width: '100%', padding: '8px', borderRadius: 8, border: '1.5px solid #ddd',
           fontSize: 12, fontFamily: 'inherit', outline: 'none', resize: 'vertical', boxSizing: 'border-box',
@@ -109,7 +109,7 @@ const TeacherPanel = ({
           padding: '8px 20px', borderRadius: 10, border: '1.5px solid ' + THEME.blue,
           background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 12, fontWeight: 700,
           color: THEME.blue, fontFamily: 'inherit',
-        }}>{'\�\� Rapor'}</button>
+        }}>{'📥 Rapor'}</button>
         <button onClick={onClose} style={{
           padding: '8px 24px', borderRadius: 10, border: 'none',
           background: 'linear-gradient(135deg,' + THEME.accent + ',' + THEME.accentD + ')',

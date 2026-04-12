@@ -25,7 +25,7 @@ const Factory = ({
         cursor: 'grab', touchAction: 'none', userSelect: 'none',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 16 }}>{'\�\�'}</span>
+          <span style={{ fontSize: 16 }}>{'🏭'}</span>
           <span style={{ fontSize: 12, fontWeight: 900, color: '#fff', letterSpacing: 1 }}>TAM-SAY FABR\İKASI</span>
         </div>
         <button onClick={() => { setShowFactory(false); reset(); }} style={{
@@ -154,7 +154,7 @@ const Factory = ({
               flex: 1, padding: '7px 0', borderRadius: 8, border: 'none',
               background: 'linear-gradient(135deg,#f59e0b,#d97706)', color: '#fff',
               fontSize: 11, fontWeight: 800, cursor: 'pointer', fontFamily: 'inherit',
-            }}>{'\�\� Kanvasa Aktar'}</button>
+            }}>{'📥 Kanvasa Aktar'}</button>
             <button onClick={reset} style={{
               flex: 1, padding: '7px 0', borderRadius: 8,
               border: '1px solid rgba(255,255,255,.15)', background: 'rgba(255,255,255,.06)',

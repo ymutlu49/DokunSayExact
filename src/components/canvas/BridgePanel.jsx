@@ -63,7 +63,7 @@ const BridgePanel = ({ posCount, negCount, zeroPairs, netValue, symExpr, animate
           padding: '4px 8px', borderRadius: 6, border: '1px solid rgba(59,130,246,.2)',
           background: 'rgba(59,130,246,.04)', cursor: 'pointer', fontSize: 8, fontWeight: 700,
           color: THEME.blue, fontFamily: 'inherit',
-        }}>{'\�\� Do\ğruda G\öster'}</button>
+        }}>{'📏 Do\ğruda G\öster'}</button>
       )}
     </div>
   </div>
