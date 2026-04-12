@@ -1,0 +1,20 @@
+/** Uygulama genelinde kullanılan renk paleti */
+export const THEME = {
+  pos: '#22c55e',
+  posB: '#15803d',
+  neg: '#ef4444',
+  negB: '#b91c1c',
+  zero: '#8b5cf6',
+  bg: '#f5f0e3',
+  card: '#fffdf7',
+  side: '#faf6ed',
+  sideB: '#e5dcc8',
+  accent: '#f59e0b',
+  accentD: '#92400e',
+  accentL: 'rgba(245,158,11,.12)',
+  border: '#1a1a1a',
+  text: '#3d3520',
+  red: '#ef4444',
+  green: '#22c55e',
+  blue: '#3b82f6',
+};
